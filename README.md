@@ -1,1 +1,1 @@
-Deploy: https://dimonio04.github.io//app/
+Deploy: https://dimonio04.github.io/otchet-by/app/
