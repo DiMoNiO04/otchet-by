@@ -1,1 +1,61 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+// Graphik LCG
+@font-face {
+  font-family: 'Graphik LCG';
+  src:
+    local('Graphik LCG Light'),
+    local('../assets/fonts/GraphikLCG/Graphik-LCG-Light'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Light.woff2') format('woff2'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Light.woff') format('woff'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  src:
+    local('Graphik LCG Regular'),
+    local('../assets/fonts/GraphikLCG/Graphik-LCG-Regular'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Regular.woff2') format('woff2'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Regular.woff') format('woff'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  src:
+    local('Graphik LCG Medium'),
+    local('../assets/fonts/GraphikLCG/Graphik-LCG-Medium'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Medium.woff2') format('woff2'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Medium.woff') format('woff'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  src:
+    local('Graphik LCG Semibold'),
+    local('../assets/fonts/GraphikLCG/Graphik-LCG-Semibold'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Semibold.woff2') format('woff2'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Semibold.woff') format('woff'),
+    url('../assets/fonts/GraphikLCG/GraphikLCG-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+// PF Agora Sans Pro
+@font-face {
+  font-family: 'PF Agora Sans Pro';
+  src:
+    local('PF Agora Sans Pro Medium'),
+    local('../assets/fonts/PFAgoraSansPro/PF-Agora-Sans-Pro-Medium'),
+    url('../assets/fonts/PFAgoraSansPro/PFAgoraSansPro-Medium.woff2') format('woff2'),
+    url('../assets/fonts/PFAgoraSansPro/PFAgoraSansPro-Medium.woff') format('woff'),
+    url('../assets/fonts/PFAgoraSansPro/PFAgoraSansPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
