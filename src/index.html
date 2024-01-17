@@ -1,26 +1,137 @@
 <!doctype html>
-<html lang="ru" class="page">
-  @include('./html/templates/head.html')
+<html lang="ru">
+  @include('html/templates/head.html', { 'title': "Инвестиционный портал Саратовской области" })
 
-  <body class="page__body">
-    <div class="site-container">
-      @include('html/templates/header.html')
-      <main class="main">
-        <picture>
-          <source srcset="img/cover.webp" type="image/webp" />
-          <img
-            loading="lazy"
-            src="img/cover.jpg"
-            class="image"
-            width="300"
-            height="300"
-            alt="Обложка канала MaxGraph"
-          />
-        </picture>
-        <p>Вы занимаетесь бизнесом, мы — отчётностью</p>
-      </main>
-      @include('html/templates/footer.html')
-      <!-- @include('html/h1.html') пример include -->
-    </div>
+  <body class="index">
+    <main>
+      <div class="base">
+        <h1>Otchet-by</h1>
+        <h2>Страницы:</h2>
+        <ol>
+          <li>
+            <a href="./main.html" target="_blank"> Главная страница </a>
+          </li>
+        </ol>
+
+        <h2>Модальные окна:</h2>
+        <ol>
+          <li></li>
+        </ol>
+      </div>
+    </main>
+
+    @include('html/templates/modals.html')
+    <!-- @include('html/templates/scripts.html') -->
   </body>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    .index body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      min-width: 40rem;
+      background: #f7f7f7;
+      color: #241f20;
+    }
+
+    .index body {
+      padding: 2rem 0;
+      font-size: 100%;
+      line-height: 1;
+      font-size: 4rem;
+      letter-spacing: 0.3rem;
+      user-select: none;
+    }
+
+    .base ul,
+    .base ol {
+      margin-bottom: 12rem;
+    }
+
+    .base ul li,
+    .base ol li {
+      font-size: 2rem;
+      list-style: none;
+    }
+
+    .base ol {
+      counter-reset: list;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .base ol > li:before {
+      content: '(' counter(list) ') ';
+      counter-increment: list;
+    }
+
+    .base li {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .base a,
+    .base button {
+      text-decoration: none;
+    }
+
+    .base a,
+    .base button {
+      color: #241f20;
+      transition: color 0.5s ease;
+    }
+
+    .base a:hover,
+    .base button:hover {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .base a:hover::before,
+    .base button:hover::before {
+      color: #000;
+    }
+
+    .base h1 {
+      margin-bottom: 6rem;
+      font-size: 6rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .base h2 {
+      margin-bottom: 2.5rem;
+      font-size: 3rem;
+      font-weight: 300;
+    }
+
+    .base h3 {
+      margin-bottom: 1.8rem;
+      font-size: 2.4rem;
+      font-weight: 300;
+    }
+
+    .base {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 48em) {
+      html {
+        font-size: 1.5625vw;
+      }
+    }
+  </style>
 </html>
