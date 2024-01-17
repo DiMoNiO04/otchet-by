@@ -1,0 +1,14 @@
+/node_modules
+_npx
+_locks
+_cacache
+_logs
+anonymous-cli-metrics.json
+.vscode
+.ecrc
+.eslintignore
+.eslintrc.js
+.htmlhintrc
+.prettierrc.json
+.stylelintrc.json
+gulpfile.js
