@@ -1,0 +1,22 @@
+.team-tasks {
+  &__cards {
+    @include grid(3);
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .team-tasks {
+    &__cards {
+      @include grid(2);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .team-tasks {
+    &__cards {
+      @include grid(1);
+    }
+  }
+}

@@ -1,3 +1,11 @@
+export const isDesc = () => {
+  if (window.innerWidth >= 1200) {
+    return true;
+  }
+
+  return false;
+};
+
 export const isMobile = () => {
   if (window.innerWidth < 768) {
     return true;

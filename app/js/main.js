@@ -102,9 +102,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************!*\
   !*** ./src/js/_scripts.js ***!
   \****************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-console.log('components');
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scripts_card_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/card.js */ "./src/js/scripts/card.js");
+
 
 /***/ }),
 
@@ -142,6 +145,47 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/functions/check-viewport.js":
+/*!********************************************!*\
+  !*** ./src/js/functions/check-viewport.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isDesc: () => (/* binding */ isDesc),
+/* harmony export */   isDesktop: () => (/* binding */ isDesktop),
+/* harmony export */   isMobile: () => (/* binding */ isMobile),
+/* harmony export */   isTablet: () => (/* binding */ isTablet)
+/* harmony export */ });
+const isDesc = () => {
+  if (window.innerWidth >= 1200) {
+    return true;
+  }
+  return false;
+};
+const isMobile = () => {
+  if (window.innerWidth < 768) {
+    return true;
+  }
+  return false;
+};
+const isTablet = () => {
+  if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
+    return true;
+  }
+  return false;
+};
+const isDesktop = () => {
+  if (window.innerWidth > 1025) {
+    return true;
+  }
+  return false;
+};
+
+/***/ }),
+
 /***/ "./src/js/functions/mobile-check.js":
 /*!******************************************!*\
   !*** ./src/js/functions/mobile-check.js ***!
@@ -167,6 +211,33 @@ const mobileCheck = () => {
   }
   return 'unknown';
 };
+
+/***/ }),
+
+/***/ "./src/js/scripts/card.js":
+/*!********************************!*\
+  !*** ./src/js/scripts/card.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/check-viewport */ "./src/js/functions/check-viewport.js");
+
+function hoverTxtCard() {
+  console.log((0,_functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__.isDesc)());
+  if ((0,_functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__.isDesc)()) {
+    $('.card').on('mouseenter', function () {
+      $(this).find('.card__content-txt').stop().slideDown();
+    });
+    $('.card').on('mouseleave', function () {
+      $(this).find('.card__content-txt').stop().slideUp();
+    });
+  }
+}
+window.addEventListener('DOMContentLoaded', () => {
+  hoverTxtCard();
+});
 
 /***/ }),
 
@@ -542,7 +613,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_vars */ "./src/js/_vars.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _scripts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_scripts */ "./src/js/_scripts.js");
-/* harmony import */ var _scripts__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scripts__WEBPACK_IMPORTED_MODULE_3__);
 
 
 

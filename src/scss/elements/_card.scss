@@ -1,0 +1,70 @@
+.card {
+  border-radius: 8px;
+  position: relative;
+  height: 280px;
+
+  &__img {
+    @include sizes(100%, 207px);
+  }
+
+  &__img img {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__content {
+    @include sizes(100%, fit-content);
+    max-height: 90%;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 8px 8px;
+    padding: 24px;
+    background-color: $grayBg;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  &__content-tit {
+    @include h3;
+  }
+
+  &__content-txt {
+    @include regular14;
+    padding: 12px 0 10px;
+    display: none;
+    overflow: hidden;
+    max-height: calc(100% - 12px);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .card {
+    height: 275px;
+
+    &__content {
+      height: 182px;
+    }
+
+    &__img {
+      height: 95px;
+    }
+
+    &__content-txt {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .card {
+    height: 287px;
+
+    &__content {
+      padding: 20px;
+      height: 192px;
+    }
+
+    &__content-txt {
+      padding: 12px 0;
+    }
+  }
+}

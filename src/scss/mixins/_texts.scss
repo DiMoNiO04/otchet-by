@@ -28,3 +28,13 @@
     font-size: 24px;
   }
 }
+
+@mixin h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 125%;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+}

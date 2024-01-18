@@ -1,1 +1,1 @@
-console.log('components');
+import './scripts/card.js';
