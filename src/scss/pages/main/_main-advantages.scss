@@ -1,0 +1,47 @@
+.main-advantages {
+  &__cards {
+    @include grid(3);
+    grid-gap: 20px;
+    grid-auto-rows: 1fr;
+  }
+
+  &__img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .main-advantages {
+    &__cards {
+      @include grid(2);
+      grid-auto-rows: minmax(224px, auto) minmax(224px, auto) minmax(300px, auto);
+    }
+
+    &__img {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: auto;
+      grid-row-end: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .main-advantages {
+    &__cards {
+      @include grid(1);
+      grid-auto-rows: minmax(240px, auto);
+    }
+
+    &__img {
+      grid-column-start: auto;
+      grid-column-end: auto;
+    }
+  }
+}
