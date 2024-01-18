@@ -20,6 +20,7 @@
   p {
     @include regular14;
     text-wrap: balance;
+    color: $greyTxt;
 
     &:last-child {
       padding-bottom: 4px;

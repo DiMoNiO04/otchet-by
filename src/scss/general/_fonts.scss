@@ -65,10 +65,10 @@
   font-family: 'Gilroy';
   src:
     local('Gilroy Bold'),
-    local('../assets/fonts/Gilroy-Bold'),
-    url('../assets/fonts/Gilroy-Bold.woff2') format('woff2'),
-    url('../assets/fonts/Gilroy-Bold.woff') format('woff'),
-    url('../assets/fonts/Gilroy-Bold.ttf') format('truetype');
+    local('../assets/fonts/Gilroy/Gilroy-Bold'),
+    url('../assets/fonts/Gilroy/Gilroy-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Gilroy/Gilroy-Bold.woff') format('woff'),
+    url('../assets/fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }

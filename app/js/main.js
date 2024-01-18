@@ -160,7 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   isTablet: () => (/* binding */ isTablet)
 /* harmony export */ });
 const isDesc = () => {
-  if (window.innerWidth >= 1200) {
+  if (window.innerWidth >= 1198) {
     return true;
   }
   return false;

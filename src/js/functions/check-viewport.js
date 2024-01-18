@@ -1,5 +1,5 @@
 export const isDesc = () => {
-  if (window.innerWidth >= 1200) {
+  if (window.innerWidth >= 1198) {
     return true;
   }
 

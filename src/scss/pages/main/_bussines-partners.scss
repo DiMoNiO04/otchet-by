@@ -1,0 +1,22 @@
+.bussines-partners {
+  &__items {
+    @include grid(5);
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .bussines-partners {
+    &__items {
+      @include grid(3);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .bussines-partners {
+    &__items {
+      @include grid(2);
+    }
+  }
+}
