@@ -41,6 +41,45 @@
   }
 }
 
+.btn-arrow {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  span {
+    color: $accent;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125%;
+  }
+
+  svg {
+    @include sizes(24px, 24px);
+    fill: $accent;
+  }
+
+  &:not(:disabled) {
+    @include hover {
+      span {
+        color: $redHover;
+      }
+      svg {
+        fill: $redHover;
+      }
+    }
+
+    &:active {
+      span {
+        color: $redPressed;
+      }
+
+      svg {
+        fill: $redPressed;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $mob) {
   .btn {
     width: 100%;

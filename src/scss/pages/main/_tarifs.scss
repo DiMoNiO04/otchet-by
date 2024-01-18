@@ -1,0 +1,165 @@
+.tarifs {
+  &__titles {
+    @include flexCenterBetween;
+  }
+
+  &__cards {
+    @include flexColumn;
+    row-gap: 20px;
+  }
+
+  &__card {
+    @include flexCenterStart;
+    border-radius: 8px;
+    border: 1px solid $greyDivider;
+    background: $white;
+    padding: 32px;
+    column-gap: 100px;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__img {
+    @include sizes(254px, 254px);
+    flex-shrink: 0;
+  }
+
+  &__names {
+    margin-bottom: 24px;
+    .h2 {
+      margin-bottom: 12px;
+    }
+
+    p {
+      @include regular14;
+      color: $greyTxt;
+    }
+  }
+
+  &__descs {
+    @include flexCenterBetween;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid $greyDivider;
+
+    li {
+      @include flexColumn;
+      row-gap: 8px;
+
+      b {
+        display: block;
+        @include bold16;
+        color: $text;
+      }
+
+      span {
+        @include regular14;
+        color: $greyTxt;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 0 0 0 auto;
+    min-width: 230px;
+  }
+
+  &__content-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .tarifs {
+    &__card {
+      padding: 40px;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__content-img {
+      display: block;
+      @include sizes(250px, 250px);
+      margin: 0 auto;
+    }
+
+    &__names {
+      margin-bottom: 20px;
+    }
+
+    &__descs {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      border: none;
+      margin: 20px 0;
+
+      li {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px solid $greyDivider;
+
+        span {
+          width: 230px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .tarifs {
+    &__card {
+      padding: 20px;
+    }
+
+    &__names {
+      margin-bottom: 8px;
+
+      .h2 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 140%;
+      }
+    }
+
+    &__content-img {
+      @include sizes(150px, 150px);
+    }
+
+    &__descs {
+      margin: 8px 0 16px;
+      border-bottom: 1px solid $greyDivider;
+      row-gap: 12px;
+      padding-bottom: 16px;
+
+      li {
+        flex-direction: column;
+        row-gap: 4px;
+        align-items: flex-start;
+        border: none;
+        padding: 0;
+
+        b {
+          font-size: 14px;
+          letter-spacing: -0.14px;
+        }
+
+        span {
+          font-size: 12px;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+}
