@@ -1,0 +1,36 @@
+.socials {
+  @include flexCenterStart;
+  column-gap: 8px;
+
+  a {
+    @include sizes(24px, 24px);
+  }
+
+  svg {
+    @include transition(fill);
+  }
+
+  &__whatsapp {
+    @include hover {
+      svg {
+        fill: $green;
+      }
+    }
+  }
+
+  &__viber {
+    @include hover {
+      svg {
+        fill: $purple;
+      }
+    }
+  }
+
+  &__telegram {
+    @include hover {
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+}

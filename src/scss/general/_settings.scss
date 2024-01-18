@@ -39,6 +39,8 @@ img {
 
 a {
   text-decoration: none;
+
+  @include transition(color);
 }
 
 input,
@@ -148,7 +150,13 @@ fieldset {
 }
 
 .container {
-  max-width: 1150px;
-  padding: 0 16px;
+  max-width: 1200px;
+  padding: 0 40px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: $mob) {
+  .container {
+    padding: 0 16px;
+  }
 }

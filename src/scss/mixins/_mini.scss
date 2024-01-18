@@ -54,3 +54,7 @@
 
   scrollbar-width: none;
 }
+
+@mixin transition($sv) {
+  transition: $sv 0.2s ease;
+}

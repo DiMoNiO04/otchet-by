@@ -1,0 +1,20 @@
+@mixin regular14 {
+  font-size: 14px;
+  line-height: 130%;
+}
+
+@mixin secondary12 {
+  font-size: 12px;
+  line-height: 140%;
+}
+
+@mixin bold16 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
