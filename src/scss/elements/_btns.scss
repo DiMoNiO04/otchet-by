@@ -1,0 +1,49 @@
+.btn {
+  @include transition(background-color);
+  padding: 14px 24px 12px 24px;
+  border-radius: 4px;
+  width: fit-content;
+  min-width: 155px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+
+  span {
+    @include transition(color);
+  }
+}
+
+.btn-prim {
+  background-color: $accent;
+
+  span {
+    @include bold16;
+    color: $white;
+  }
+
+  &:not(:disabled) {
+    @include hover {
+      background-color: $redHover;
+    }
+
+    &:active {
+      background-color: $redPressed;
+    }
+  }
+
+  &:disabled {
+    background-color: $greyDivider;
+    cursor: default;
+
+    span {
+      color: $grey;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .btn {
+    width: 100%;
+    min-width: 100%;
+  }
+}

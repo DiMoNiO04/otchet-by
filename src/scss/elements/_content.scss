@@ -1,0 +1,7 @@
+.content {
+  p {
+    @include mb(8px);
+    @include regular14;
+    text-wrap: balance;
+  }
+}

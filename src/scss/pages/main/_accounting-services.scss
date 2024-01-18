@@ -1,0 +1,48 @@
+.accounting-services {
+  &__cont {
+    @include flexCenterStart;
+    column-gap: 115px;
+    margin-bottom: 32px;
+  }
+
+  &__txts {
+    max-width: 740px;
+    padding: 4px 0;
+  }
+
+  &__cards {
+    @include grid(4);
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .accounting-services {
+    &__cont {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+
+    &__txts {
+      padding: 0;
+    }
+
+    &__cards {
+      @include grid(2);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .accounting-services {
+    &__cards {
+      @include grid(1);
+    }
+
+    &__cont {
+      margin-bottom: 24px;
+    }
+  }
+}

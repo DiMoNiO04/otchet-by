@@ -1,0 +1,38 @@
+.card-about {
+  padding: 24px;
+  border-radius: 8px;
+  background-color: $grayBg;
+
+  img {
+    @include sizes(32px, 32px);
+    fill: none;
+    stroke: $accent;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  b {
+    @include bold16;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  p {
+    @include regular14;
+    text-wrap: balance;
+
+    &:last-child {
+      padding-bottom: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .card-about {
+    padding: 20px;
+
+    p:last-child {
+      padding: 0;
+    }
+  }
+}

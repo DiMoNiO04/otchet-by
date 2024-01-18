@@ -1,0 +1,16 @@
+.h2 {
+  @include h2;
+  color: $text;
+}
+
+@media screen and (max-width: $laptop) {
+  .h2 {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .h2 {
+    margin-bottom: 24px;
+  }
+}
