@@ -38,3 +38,10 @@
     font-size: 16px;
   }
 }
+
+@mixin medium40 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.4px;
+}
