@@ -16,9 +16,12 @@
       border-radius: 8px;
       background-color: $white;
       padding: 24px;
-      @include regular14;
       @include flexColumn;
       justify-content: space-between;
+
+      p {
+        @include regular14;
+      }
 
       b {
         @include medium40;

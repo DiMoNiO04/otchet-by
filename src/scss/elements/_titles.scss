@@ -3,6 +3,10 @@
   color: $text;
 }
 
+.h1 {
+  @include h1;
+}
+
 @media screen and (max-width: $laptop) {
   .h2 {
     margin-bottom: 32px;

@@ -1,0 +1,112 @@
+.baner {
+  background-color: $grayBg;
+  overflow: hidden;
+
+  &__content {
+    @include flexCenter;
+  }
+}
+
+.baner--main {
+  padding-top: 40px;
+
+  .baner {
+    &__img {
+      @include sizes(464px, 450px);
+      flex-shrink: 0;
+    }
+
+    &__content {
+      column-gap: 150px;
+      padding-right: 45px;
+    }
+
+    &__subtitle {
+      @include regular20;
+      text-wrap: balance;
+    }
+
+    &__cont {
+      @include flexColumn;
+      row-gap: 24px;
+      max-width: 360px;
+      position: relative;
+      top: -20px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .baner--main {
+    .baner {
+      &__content {
+        column-gap: 115px;
+        padding-right: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .baner {
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  .baner--main {
+    padding-top: 33px;
+
+    .baner {
+      &__img {
+        @include sizes(400px, 393px);
+        margin-bottom: -6px;
+        margin-left: -6px;
+      }
+
+      &__cont {
+        column-gap: 54px;
+        max-width: 100%;
+        width: 280px;
+        flex-shrink: 0;
+      }
+
+      &__content {
+        padding-right: 40px;
+        column-gap: 54px;
+      }
+
+      &__subtitle {
+        font-size: 14px;
+        line-height: 130%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .baner {
+    padding: 40px 16px 0;
+  }
+
+  .baner--main {
+    .baner {
+      &__content {
+        padding: 0;
+        flex-direction: column-reverse;
+        row-gap: 22px;
+      }
+
+      &__img {
+        @include sizes(233px, 230px);
+        margin: 0 auto;
+      }
+
+      &__cont {
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+}

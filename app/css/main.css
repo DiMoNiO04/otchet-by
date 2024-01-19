@@ -322,6 +322,18 @@ fieldset {
   }
 }
 
+.h1 {
+  font-family: "PF Agora Sans Pro", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 110%;
+}
+@media screen and (max-width: 1198px) {
+  .h1 {
+    font-size: 32px;
+  }
+}
+
 @media screen and (max-width: 1918px) {
   .h2 {
     margin-bottom: 32px;
@@ -837,6 +849,120 @@ fieldset {
     row-gap: 16px;
   }
 }
+.baner {
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+.baner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.baner--main {
+  padding-top: 40px;
+}
+.baner--main .baner__img {
+  width: 464px;
+  height: 450px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.baner--main .baner__content {
+  -webkit-column-gap: 150px;
+  -moz-column-gap: 150px;
+  column-gap: 150px;
+  padding-right: 45px;
+}
+.baner--main .baner__subtitle {
+  font-size: 20px;
+  line-height: 125%;
+  text-wrap: balance;
+}
+.baner--main .baner__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 24px;
+  max-width: 360px;
+  position: relative;
+  top: -20px;
+}
+
+@media screen and (max-width: 1918px) {
+  .baner--main .baner__content {
+    -webkit-column-gap: 115px;
+    -moz-column-gap: 115px;
+    column-gap: 115px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 1198px) {
+  .baner .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .baner--main {
+    padding-top: 33px;
+  }
+  .baner--main .baner__img {
+    width: 400px;
+    height: 393px;
+    margin-bottom: -6px;
+    margin-left: -6px;
+  }
+  .baner--main .baner__cont {
+    -webkit-column-gap: 54px;
+    -moz-column-gap: 54px;
+    column-gap: 54px;
+    max-width: 100%;
+    width: 280px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .baner--main .baner__content {
+    padding-right: 40px;
+    -webkit-column-gap: 54px;
+    -moz-column-gap: 54px;
+    column-gap: 54px;
+  }
+  .baner--main .baner__subtitle {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+@media screen and (max-width: 766px) {
+  .baner {
+    padding: 40px 16px 0;
+  }
+  .baner--main .baner__content {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    row-gap: 22px;
+  }
+  .baner--main .baner__img {
+    width: 233px;
+    height: 230px;
+    margin: 0 auto;
+  }
+  .baner--main .baner__cont {
+    top: 0;
+    width: 100%;
+  }
+}
 .accounting-services__cont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1227,8 +1353,6 @@ fieldset {
   border-radius: 8px;
   background-color: #fff;
   padding: 24px;
-  font-size: 14px;
-  line-height: 130%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1239,6 +1363,10 @@ fieldset {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.statistics-company__cards li p {
+  font-size: 14px;
+  line-height: 130%;
 }
 .statistics-company__cards li b {
   font-size: 40px;
