@@ -15,6 +15,12 @@
   letter-spacing: -0.2px;
 }
 
+@mixin medium20 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
 @mixin secondary12 {
   font-size: 12px;
   line-height: 140%;

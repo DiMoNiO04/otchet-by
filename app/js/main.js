@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _scripts_card_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/card.js */ "./src/js/scripts/card.js");
+/* harmony import */ var _scripts_hover_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/hover.js */ "./src/js/scripts/hover.js");
 /* harmony import */ var _scripts_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/dropdown.js */ "./src/js/scripts/dropdown.js");
 /* harmony import */ var _scripts_dropdown_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scripts_dropdown_js__WEBPACK_IMPORTED_MODULE_1__);
 
@@ -217,32 +217,6 @@ const mobileCheck = () => {
 
 /***/ }),
 
-/***/ "./src/js/scripts/card.js":
-/*!********************************!*\
-  !*** ./src/js/scripts/card.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/check-viewport */ "./src/js/functions/check-viewport.js");
-
-function hoverTxtCard() {
-  if ((0,_functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__.isDesc)()) {
-    $('.card').on('mouseenter', function () {
-      $(this).find('.card__content-txt').stop().slideDown();
-    });
-    $('.card').on('mouseleave', function () {
-      $(this).find('.card__content-txt').stop().slideUp();
-    });
-  }
-}
-window.addEventListener('DOMContentLoaded', () => {
-  hoverTxtCard();
-});
-
-/***/ }),
-
 /***/ "./src/js/scripts/dropdown.js":
 /*!************************************!*\
   !*** ./src/js/scripts/dropdown.js ***!
@@ -263,6 +237,30 @@ function dropdownShowHide() {
 window.addEventListener('DOMContentLoaded', () => {
   dropdownShowHide();
 });
+
+/***/ }),
+
+/***/ "./src/js/scripts/hover.js":
+/*!*********************************!*\
+  !*** ./src/js/scripts/hover.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/check-viewport */ "./src/js/functions/check-viewport.js");
+
+function hoverTxtCard() {
+  if ((0,_functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__.isDesc)()) {
+    $('.js-hover').on('mouseenter', function () {
+      $(this).find('.js-hover-content').stop().slideDown();
+    });
+    $('.js-hover').on('mouseleave', function () {
+      $(this).find('.js-hover-content').stop().slideUp();
+    });
+  }
+}
+hoverTxtCard();
 
 /***/ }),
 
