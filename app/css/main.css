@@ -572,6 +572,22 @@ fieldset {
     stroke: #dc143c;
   }
 }
+.slider-navigation__btns {
+  width: calc(100% + 64px + 72px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  top: calc(50% - 18px - 25px);
+  left: -68px;
+  position: absolute;
+  z-index: 2;
+}
 
 .pagination__bullets {
   display: -webkit-box;
@@ -599,17 +615,8 @@ fieldset {
 
 .swiper-pagination-bullet {
   background: #f7f7f7;
-  -webkit-transition: background 0.2s ease;
-  transition: background 0.2s ease;
   width: 10px;
   height: 10px;
-}
-@media (any-hover: hover) {
-  .swiper-pagination-bullet:hover {
-    background: #dc143c;
-    opacity: 0.5;
-    cursor: pointer;
-  }
 }
 .swiper-pagination-bullet-active {
   background: #dc143c;
@@ -1238,21 +1245,10 @@ fieldset {
     color: #dc143c;
   }
 }
-.team__navigation-btns {
-  width: calc(100% + 64px + 72px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  top: calc(50% - 18px - 50px);
-  left: -68px;
-  position: absolute;
-  z-index: 2;
+.team__slide-txt {
+  color: #555152;
+  font-size: 14px;
+  line-height: 130%;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1286,6 +1282,125 @@ fieldset {
     padding-bottom: 5px;
   }
 }
+.reviews {
+  background-color: #f7f7f7;
+  padding: 120px 0;
+}
+.reviews__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.reviews__titles .h2 {
+  margin: 0;
+}
+.reviews__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  row-gap: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  height: calc(100% - 48px);
+  padding: 24px;
+}
+.reviews__slide {
+  height: 100%;
+}
+.reviews__slider {
+  position: relative;
+}
+.reviews__swiper {
+  margin-bottom: 20px;
+}
+.reviews__wrapper {
+  -webkit-box-align: stretch !important;
+  -ms-flex-align: stretch !important;
+  align-items: stretch !important;
+}
+.reviews__txt {
+  font-size: 14px;
+  line-height: 130%;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #555152;
+}
+.reviews__name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+  color: #dc143c;
+}
+.reviews .slider-navigation__btns-next,
+.reviews .slider-navigation__btns-prev {
+  background-color: #fff;
+}
+.reviews .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 1;
+}
+.reviews .swiper-pagination-bullet-active {
+  background: #dc143c;
+}
+
+@media screen and (max-width: 1280px) {
+  .reviews__navigation {
+    display: none;
+  }
+}
+@media screen and (max-width: 1198px) {
+  .reviews {
+    padding: 100px 0;
+  }
+  .reviews__titles {
+    margin-bottom: 32px;
+  }
+  .reviews__content {
+    padding: 20px;
+    height: calc(100% - 40px);
+  }
+}
+@media screen and (max-width: 766px) {
+  .reviews {
+    padding: 60px 0;
+  }
+  .reviews__titles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    row-gap: 20px;
+    margin-bottom: 24px;
+  }
+}
+.swiper-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
 .accounting-services__cont {
   display: -webkit-box;
   display: -ms-flexbox;

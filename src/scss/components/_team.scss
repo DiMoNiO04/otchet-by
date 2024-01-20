@@ -37,13 +37,9 @@
     }
   }
 
-  &__navigation-btns {
-    width: calc(100% + 64px + 72px);
-    @include flexCenterBetween;
-    top: calc(50% - 36px / 2 - 50px);
-    left: -68px;
-    position: absolute;
-    z-index: 2;
+  &__slide-txt {
+    color: $greyTxt;
+    @include regular14;
   }
 }
 

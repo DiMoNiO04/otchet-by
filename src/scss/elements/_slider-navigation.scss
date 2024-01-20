@@ -20,6 +20,15 @@
       }
     }
   }
+
+  &__btns {
+    width: calc(100% + 64px + 72px);
+    @include flexCenterBetween;
+    top: calc(50% - 36px / 2 - 50px / 2);
+    left: -68px;
+    position: absolute;
+    z-index: 2;
+  }
 }
 
 .pagination__bullets {
@@ -36,14 +45,7 @@
 
 .swiper-pagination-bullet {
   background: $grayBg;
-  @include transition(background);
   @include sizes(10px, 10px);
-
-  @include hover {
-    background: $accent;
-    opacity: 0.5;
-    cursor: pointer;
-  }
 
   &-active {
     background: $accent;
