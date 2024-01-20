@@ -1539,3 +1539,105 @@ fieldset {
     min-height: 246px;
   }
 }
+.responsobilities__titles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  margin-bottom: 40px;
+}
+.responsobilities__titles .h2 {
+  margin: 0;
+}
+.responsobilities__blocks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.responsobilities__block {
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #eeeff1;
+}
+.responsobilities__block-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.2px;
+  margin-bottom: 24px;
+}
+.responsobilities__block-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-bottom: 12px;
+}
+.responsobilities__block-list li {
+  font-size: 14px;
+  line-height: 130%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-column-gap: 4px;
+  -moz-column-gap: 4px;
+  column-gap: 4px;
+  position: relative;
+}
+.responsobilities__block-list li::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../assets/img/bullet.svg");
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 1198px) {
+  .responsobilities__titles {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+    margin-bottom: 32px;
+  }
+  .responsobilities__block {
+    padding: 20px;
+  }
+  .responsobilities__block-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125%;
+  }
+  .responsobilities__block-list {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 766px) {
+  .responsobilities__titles {
+    margin-bottom: 24px;
+  }
+  .responsobilities__blocks {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

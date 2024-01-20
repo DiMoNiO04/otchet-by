@@ -8,6 +8,13 @@
   line-height: 125%;
 }
 
+@mixin bold20 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.2px;
+}
+
 @mixin secondary12 {
   font-size: 12px;
   line-height: 140%;
