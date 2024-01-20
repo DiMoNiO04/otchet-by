@@ -1,0 +1,51 @@
+.slider-navigation {
+  svg {
+    @include sizes(24px, 24px);
+    fill: none;
+    stroke: $text;
+    stroke-width: 1.5;
+    @include transition(stroke);
+  }
+
+  &__btns-next,
+  &__btns-prev {
+    @include flexCenter;
+    @include sizes(36px, 36px);
+    background-color: $grayBg;
+    border-radius: 4px;
+
+    @include hover {
+      svg {
+        stroke: $accent;
+      }
+    }
+  }
+}
+
+.pagination__bullets {
+  @include flexCenter;
+  column-gap: 12px;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px 0;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+.swiper-pagination-bullet {
+  background: $grayBg;
+  @include transition(background);
+  @include sizes(10px, 10px);
+
+  @include hover {
+    background: $accent;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &-active {
+    background: $accent;
+  }
+}

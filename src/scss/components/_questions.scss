@@ -11,6 +11,12 @@
     cursor: pointer;
     padding: 24px;
 
+    @include hover {
+      svg {
+        stroke: $accent;
+      }
+    }
+
     &.active {
       svg {
         transform: rotate(180deg);
@@ -28,7 +34,9 @@
     flex-shrink: 0;
 
     svg {
-      @include transition(transform);
+      transition:
+        stroke 0.2s ease,
+        transform 0.2s ease;
       fill: none;
       stroke: $greyTxt;
       stroke-width: 1.5px;

@@ -543,6 +543,78 @@ fieldset {
     padding: 12px 0;
   }
 }
+.slider-navigation svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #241f20;
+  stroke-width: 1.5;
+  -webkit-transition: stroke 0.2s ease;
+  transition: stroke 0.2s ease;
+}
+.slider-navigation__btns-next, .slider-navigation__btns-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+}
+@media (any-hover: hover) {
+  .slider-navigation__btns-next:hover svg, .slider-navigation__btns-prev:hover svg {
+    stroke: #dc143c;
+  }
+}
+
+.pagination__bullets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 0;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+.swiper-pagination-bullet {
+  background: #f7f7f7;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+  width: 10px;
+  height: 10px;
+}
+@media (any-hover: hover) {
+  .swiper-pagination-bullet:hover {
+    background: #dc143c;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+.swiper-pagination-bullet-active {
+  background: #dc143c;
+}
+
 .footer {
   background-color: #232628;
 }
@@ -984,6 +1056,11 @@ fieldset {
   cursor: pointer;
   padding: 24px;
 }
+@media (any-hover: hover) {
+  .questions__block-inner:hover svg {
+    stroke: #dc143c;
+  }
+}
 .questions__block-inner.active svg {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -1002,10 +1079,10 @@ fieldset {
   flex-shrink: 0;
 }
 .questions__block-arrow svg {
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transition: stroke 0.2s ease, -webkit-transform 0.2s ease;
+  transition: stroke 0.2s ease, -webkit-transform 0.2s ease;
+  transition: stroke 0.2s ease, transform 0.2s ease;
+  transition: stroke 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
   fill: none;
   stroke: #555152;
   stroke-width: 1.5px;
@@ -1116,6 +1193,97 @@ fieldset {
     font-size: 16px;
     font-weight: 500;
     line-height: 125%;
+  }
+}
+.team__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.team__titles .h2 {
+  margin: 0;
+}
+.team__slider {
+  position: relative;
+}
+.team__swiper {
+  margin-bottom: 20px;
+}
+.team__slide-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.team__slide-img img {
+  border-radius: 8px;
+}
+.team__slide-name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  margin-bottom: 10px;
+  display: block;
+}
+@media (any-hover: hover) {
+  .team__slide-name:hover {
+    color: #dc143c;
+  }
+}
+.team__navigation-btns {
+  width: calc(100% + 64px + 72px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  top: calc(50% - 18px - 50px);
+  left: -68px;
+  position: absolute;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1280px) {
+  .team__navigation {
+    display: none;
+  }
+}
+@media screen and (max-width: 1198px) {
+  .team__titles {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 766px) {
+  .team__titles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 20px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .team__slide-name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125%;
+  }
+  .team__slide {
+    padding-bottom: 5px;
   }
 }
 .accounting-services__cont {
