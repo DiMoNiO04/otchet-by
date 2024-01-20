@@ -963,6 +963,83 @@ fieldset {
     width: 100%;
   }
 }
+.questions__block {
+  border-radius: 8px;
+  border: 1px solid #eeeff1;
+  cursor: pointer;
+}
+.questions__block:not(:last-child) {
+  margin-bottom: 20px;
+}
+.questions__block-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 24px;
+}
+.questions__block-inner.active svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.questions__block-question {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+  max-width: 780px;
+}
+.questions__block-arrow {
+  width: 20px;
+  height: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.questions__block-arrow svg {
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  fill: none;
+  stroke: #555152;
+  stroke-width: 1.5px;
+}
+.questions__block-content {
+  padding: 0 24px 24px;
+  max-width: 780px;
+  display: none;
+}
+.questions__block-content p {
+  color: #555152;
+}
+
+@media screen and (max-width: 1198px) {
+  .questions__block-question, .questions__block-content {
+    max-width: 588px;
+  }
+}
+@media screen and (max-width: 766px) {
+  .questions__block:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .questions__block-inner {
+    padding: 20px;
+  }
+  .questions__block-content {
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+  .questions__block-question {
+    font-size: 14px;
+    max-width: 212px;
+  }
+}
 .accounting-services__cont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1451,6 +1528,9 @@ fieldset {
 .guarantees__titles .h2 {
   margin: 0;
 }
+.guarantees__txts p {
+  color: #555152;
+}
 .guarantees__list {
   display: -ms-grid;
   display: grid;
@@ -1552,6 +1632,9 @@ fieldset {
 .responsobilities__titles .h2 {
   margin: 0;
 }
+.responsobilities__txts p {
+  color: #555152;
+}
 .responsobilities__blocks {
   display: -ms-grid;
   display: grid;
@@ -1598,6 +1681,7 @@ fieldset {
   -moz-column-gap: 4px;
   column-gap: 4px;
   position: relative;
+  color: #555152;
 }
 .responsobilities__block-list li::before {
   content: "";

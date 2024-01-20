@@ -107,6 +107,9 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_card_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/card.js */ "./src/js/scripts/card.js");
+/* harmony import */ var _scripts_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/dropdown.js */ "./src/js/scripts/dropdown.js");
+/* harmony import */ var _scripts_dropdown_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scripts_dropdown_js__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -225,7 +228,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/check-viewport */ "./src/js/functions/check-viewport.js");
 
 function hoverTxtCard() {
-  console.log((0,_functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__.isDesc)());
   if ((0,_functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__.isDesc)()) {
     $('.card').on('mouseenter', function () {
       $(this).find('.card__content-txt').stop().slideDown();
@@ -237,6 +239,29 @@ function hoverTxtCard() {
 }
 window.addEventListener('DOMContentLoaded', () => {
   hoverTxtCard();
+});
+
+/***/ }),
+
+/***/ "./src/js/scripts/dropdown.js":
+/*!************************************!*\
+  !*** ./src/js/scripts/dropdown.js ***!
+  \************************************/
+/***/ (() => {
+
+function dropdownShowHide() {
+  $('.js-dropdown').each(function () {
+    const dropdown = $(this);
+    const dropdownInner = dropdown.find('.js-dropdown-inner');
+    const dropdownContent = dropdown.find('.js-dropdown-content');
+    dropdownInner.on('click', () => {
+      dropdownContent.slideToggle();
+      dropdownInner.toggleClass('active');
+    });
+  });
+}
+window.addEventListener('DOMContentLoaded', () => {
+  dropdownShowHide();
 });
 
 /***/ }),

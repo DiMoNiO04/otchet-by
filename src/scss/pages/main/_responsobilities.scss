@@ -9,6 +9,10 @@
     }
   }
 
+  &__txts p {
+    color: $greyTxt;
+  }
+
   &__blocks {
     @include grid(2);
     grid-gap: 20px;
@@ -35,6 +39,7 @@
       @include flexStart;
       column-gap: 4px;
       position: relative;
+      color: $greyTxt;
 
       &::before {
         content: '';

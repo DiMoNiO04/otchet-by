@@ -1,7 +1,6 @@
 import { isDesc } from '../functions/check-viewport';
 
 function hoverTxtCard() {
-  console.log(isDesc());
   if (isDesc()) {
     $('.card').on('mouseenter', function () {
       $(this).find('.card__content-txt').stop().slideDown();
