@@ -110,6 +110,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_swipers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/swipers.js */ "./src/js/scripts/swipers.js");
 /* harmony import */ var _scripts_content_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/content.js */ "./src/js/scripts/content.js");
 /* harmony import */ var _scripts_content_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scripts_content_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _scripts_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/map.js */ "./src/js/scripts/map.js");
+/* harmony import */ var _scripts_map_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scripts_map_js__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -294,6 +297,56 @@ function hoverTxtCard() {
   }
 }
 hoverTxtCard();
+
+/***/ }),
+
+/***/ "./src/js/scripts/map.js":
+/*!*******************************!*\
+  !*** ./src/js/scripts/map.js ***!
+  \*******************************/
+/***/ (() => {
+
+// Метка для карты контактов
+const PLACEMARK_CONTACT = {
+  lalitude: 53.902134,
+  longitude: 27.568653
+};
+function removeContent(mainMap) {
+  mainMap.controls.remove('geolocationControl');
+  mainMap.controls.remove('searchControl');
+  mainMap.controls.remove('trafficControl');
+  mainMap.controls.remove('typeSelector');
+  mainMap.controls.remove('rulesControl');
+}
+
+// Код для карты контактов
+function initContactsMap() {
+  let left;
+  if (window.innerWidth >= 1198) {
+    left = 0.01;
+  } else if (window.innerWidth < 1198 && window.innerWidth >= 768) {
+    left = 0.004;
+  } else {
+    left = 0;
+  }
+  const contactsMap = new ymaps.Map('map', {
+    center: [PLACEMARK_CONTACT.lalitude, PLACEMARK_CONTACT.longitude + left],
+    zoom: 16
+  });
+  const contactsPlacemark = new ymaps.Placemark([PLACEMARK_CONTACT.lalitude, PLACEMARK_CONTACT.longitude], {}, {
+    hideIconOnBalloonOpen: false,
+    iconLayout: 'default#image',
+    iconImageHref: '../assets/img/map-pin.svg',
+    icon_imagesize: [28, 40]
+  });
+  contactsMap.geoObjects.add(contactsPlacemark);
+  removeContent(contactsMap);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('map')) {
+    ymaps.ready(initContactsMap);
+  }
+});
 
 /***/ }),
 

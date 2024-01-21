@@ -1,0 +1,107 @@
+.contacts {
+  position: relative;
+
+  &__content {
+    padding: 100px 66px;
+    background-color: $grayBg;
+    width: 550px;
+  }
+
+  .h2 {
+    margin-bottom: 36px;
+  }
+
+  &__container {
+    height: 430px;
+  }
+
+  &__content {
+    margin: 0 0 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include fullSize;
+  }
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    @include gapSize(80px, 30px);
+  }
+
+  &__block-title {
+    @include bold16;
+    margin-bottom: 12px;
+  }
+
+  &__block-txts {
+    @include flexColumn;
+    row-gap: 8px;
+
+    p,
+    a {
+      @include regular14;
+      color: $greyTxt;
+      @include transition(color);
+
+      @include hover {
+        color: $text;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .contacts {
+    .container {
+      padding: 0;
+    }
+
+    .h2 {
+      margin-bottom: 20px;
+    }
+
+    &__container,
+    &__wrap {
+      height: 460px;
+    }
+
+    &__content {
+      padding: 50px 40px;
+      width: 262px;
+    }
+
+    &__blocks {
+      @include grid(1);
+      row-gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .contacts {
+    &__map,
+    &__content {
+      position: static;
+    }
+
+    &__container,
+    &__map {
+      height: 100%;
+    }
+
+    &__content {
+      width: 100%;
+      padding: 60px 16px;
+    }
+
+    .h2 {
+      margin-bottom: 24px;
+    }
+  }
+}

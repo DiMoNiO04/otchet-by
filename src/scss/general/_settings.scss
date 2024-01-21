@@ -25,6 +25,7 @@ body {
   padding: 0;
   background-color: $white;
   background: $white;
+  overflow-x: hidden;
 
   &.ov-hidden {
     overflow: hidden;
