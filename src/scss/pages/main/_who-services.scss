@@ -1,0 +1,126 @@
+.who-services {
+  &__contents {
+    position: relative;
+  }
+
+  &__content {
+    @include hidden;
+    transition:
+      visibility 0.5s ease,
+      opacity 0.5s ease;
+
+    &.active {
+      @include visible;
+    }
+
+    &:last-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__items {
+    @include grid(7);
+    column-gap: 17px;
+
+    li {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid $greyDivider;
+
+      img {
+        @include sizes(50px, 50px);
+        margin-bottom: 17px;
+      }
+
+      p {
+        @include regular14;
+      }
+    }
+  }
+
+  &__btns {
+    @include flexCenter;
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    @include flexCenter;
+    column-gap: 18px;
+    @include sizes(230px, 66px);
+    background-color: $grayBg;
+    transition:
+      background-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+
+    span {
+      color: $actionDarkBlue;
+      @include regular14;
+    }
+
+    svg {
+      @include sizes(32px, 32px);
+      @include transition(fill);
+      fill: $text;
+    }
+
+    &.active {
+      height: 68px;
+      border-radius: 4px;
+      background-color: $white;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+
+      svg {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .who-services {
+    &__items {
+      @include grid(4);
+      grid-gap: 20px;
+      grid-auto-rows: 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .who-services {
+    &__items {
+      @include grid(1);
+      grid-gap: 20px;
+      grid-auto-rows: 1fr;
+    }
+
+    &__btn {
+      flex-direction: column;
+      row-gap: 5px;
+      @include sizes(100%, auto);
+      padding: 10px;
+
+      &.active {
+        height: auto;
+      }
+
+      svg {
+        @include sizes(26px, 26px);
+      }
+
+      span {
+        @include secondary12;
+      }
+    }
+  }
+}
