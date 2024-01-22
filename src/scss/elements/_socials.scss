@@ -8,6 +8,7 @@
 
   svg {
     @include transition(fill);
+    fill: rgba(0, 0, 0, 0.4);
   }
 
   &__whatsapp {

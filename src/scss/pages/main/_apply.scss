@@ -31,7 +31,7 @@
     a {
       color: $accent;
       border-bottom: 1px solid;
-      @include transition(color);
+      @include transition(border-color);
       @include hover {
         border-color: transparent;
       }
@@ -84,6 +84,11 @@
 
     &__content {
       padding: 64px 0;
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
     }
 
     &__policy {

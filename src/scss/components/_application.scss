@@ -1,0 +1,189 @@
+.application {
+  &__container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px;
+    border-radius: 8px;
+  }
+
+  &__content {
+    @include flexColumn;
+    row-gap: 32px;
+    max-width: 750px;
+  }
+
+  .h2 {
+    margin: 0;
+  }
+
+  &__titles {
+    @include flexColumn;
+    row-gap: 20px;
+  }
+
+  &__subtitle {
+    @include regular14;
+    color: $greyTxt;
+    max-width: 400px;
+  }
+
+  &__form {
+    @include flexEndBetween;
+    column-gap: 20px;
+    margin-bottom: 20px;
+
+    .application__policy {
+      display: none;
+    }
+  }
+
+  &__form-inputs {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__input {
+    width: 260px;
+  }
+
+  &__policy {
+    @include regular14;
+
+    a {
+      color: $accent;
+      border-bottom: 1px solid;
+      @include transition(border-color);
+
+      @include hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__connection-content {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__connection-phone {
+    @include regular14;
+    color: $accent;
+    @include transition(color);
+    @include hover {
+      color: $text;
+    }
+  }
+
+  &__connection-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .application {
+    &__container {
+      padding: 60px 52px;
+    }
+
+    &__content {
+      row-gap: 24px;
+    }
+
+    &__input {
+      width: 240px;
+    }
+
+    &__form {
+      margin: 0;
+      flex-direction: column;
+      row-gap: 24px;
+
+      .application__policy {
+        display: block;
+      }
+    }
+
+    &__btns {
+      @include grid(2);
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+
+    &__content {
+      max-width: 500px;
+    }
+
+    &__policy {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .application {
+    &__container {
+      background-image: none !important;
+      background-color: $grayBg;
+      padding: 52px 15px;
+    }
+
+    &__titles {
+      row-gap: 16px;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__connection-title {
+      margin-bottom: 16px;
+    }
+
+    &__connection-content {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 16px;
+    }
+
+    &__connection-socials a {
+      @include sizes(32px, 32px);
+    }
+
+    &__form-inputs,
+    &__btns {
+      @include flexColumn;
+      width: 100%;
+    }
+
+    &__form-inputs {
+      row-gap: 16px;
+    }
+
+    &__subtitle {
+      max-width: 100%;
+    }
+
+    &__btns {
+      row-gap: 12px;
+      align-items: flex-start;
+    }
+
+    &__input {
+      width: 100%;
+    }
+
+    &__policy {
+      @include secondary12;
+    }
+  }
+}
