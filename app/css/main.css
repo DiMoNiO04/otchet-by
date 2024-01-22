@@ -225,6 +225,10 @@ main {
   margin-top: 126px;
 }
 
+.disable-scroll .header {
+  padding-right: 18px;
+}
+
 @media screen and (max-width: 1198px) {
   .section {
     margin-top: 100px;
@@ -721,7 +725,7 @@ main {
   -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
-  padding: 16px 16px 14px;
+  padding: 15px 15px 14px;
   border-radius: 4px;
   background-color: #fff;
   -webkit-column-gap: 8px;
@@ -2534,6 +2538,297 @@ main {
   .application__policy {
     font-size: 12px;
     line-height: 140%;
+  }
+}
+.graph-modal {
+  background: rgba(15, 14, 14, 0.4);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.graph-modal::before {
+  display: none;
+}
+.graph-modal__close {
+  background: none;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+}
+.graph-modal__close svg {
+  width: 100%;
+  height: 100%;
+  stroke: #979596;
+  stroke-width: 1.5;
+  -webkit-transition: stroke 0.2s ease;
+  transition: stroke 0.2s ease;
+}
+@media (any-hover: hover) {
+  .graph-modal__close:hover svg {
+    stroke: #241f20;
+  }
+}
+.graph-modal__container {
+  border-radius: 8px;
+  background-color: #fff;
+}
+.graph-modal .h2 {
+  margin: 0;
+}
+
+.modal-apply {
+  width: 1120px;
+  padding: 56px 56px 0 60px;
+}
+.modal-apply__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.modal-apply__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 32px;
+  padding-bottom: 60px;
+}
+.modal-apply__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.modal-apply__subtitle {
+  font-size: 14px;
+  line-height: 130%;
+  color: #555152;
+}
+.modal-apply__img {
+  width: 251px;
+  height: 368px;
+}
+.modal-apply__img img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.modal-apply__forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.modal-apply__form, .modal-apply__form-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+.modal-apply__input {
+  width: 260px;
+}
+.modal-apply__policy {
+  font-size: 14px;
+  line-height: 130%;
+  color: #555152;
+}
+.modal-apply__policy a {
+  color: #dc143c;
+  border-bottom: 1px solid #dc143c;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+@media (any-hover: hover) {
+  .modal-apply__policy a:hover {
+    border-color: transparent;
+  }
+}
+.modal-apply__connection-title {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+}
+.modal-apply__connection-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+.modal-apply__connection-phone {
+  font-size: 14px;
+  line-height: 130%;
+  color: #dc143c;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+@media (any-hover: hover) {
+  .modal-apply__connection-phone:hover {
+    color: #ff1a47;
+  }
+}
+
+.modal-success {
+  width: 406px;
+  padding: 60px;
+}
+.modal-success__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  row-gap: 24px;
+}
+.modal-success__txt {
+  font-size: 14px;
+  line-height: 130%;
+  color: #555152;
+  text-align: center;
+  text-wrap: balance;
+}
+
+@media screen and (max-width: 1198px) {
+  .modal-apply {
+    width: 688px;
+    padding: 56px 0 0 48px;
+  }
+  .modal-apply .h2 {
+    width: 350px;
+  }
+  .modal-apply__content {
+    width: 290px;
+    row-gap: 24px;
+  }
+  .modal-apply__container {
+    position: relative;
+    overflow: hidden;
+  }
+  .modal-apply__titles {
+    row-gap: 16px;
+  }
+  .modal-apply__form, .modal-apply__form-inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+  .modal-apply__form {
+    row-gap: 24px;
+  }
+  .modal-apply__forms {
+    row-gap: 16px;
+  }
+  .modal-apply__form-inputs {
+    row-gap: 16px;
+  }
+  .modal-apply__input, .modal-apply__btns, .modal-apply__btns button {
+    width: 100%;
+  }
+  .modal-apply__img {
+    width: 354px;
+    height: 520px;
+    position: absolute;
+    right: -14px;
+    bottom: 0;
+  }
+  .modal-apply__policy {
+    line-height: 140%;
+  }
+  .modal-apply__connection-socials .socials__telegram svg {
+    fill: #2fa6da;
+  }
+  .modal-apply__connection-socials .socials__viber svg {
+    fill: #7d3daf;
+  }
+  .modal-apply__connection-socials .socials__whatsapp svg {
+    fill: #25d366;
+  }
+}
+@media screen and (max-width: 766px) {
+  .modal-apply {
+    width: 100%;
+    padding: 52px 16px;
+    border-radius: 0;
+    height: 100vh;
+    margin: 0;
+  }
+  .modal-apply__img {
+    display: none;
+  }
+  .modal-apply .h2, .modal-apply__content {
+    width: 100%;
+  }
+  .modal-apply__content {
+    padding: 0;
+  }
+  .modal-apply__form {
+    row-gap: 20px;
+  }
+  .modal-apply__connection-title {
+    margin-bottom: 16px;
+  }
+  .modal-apply__connection-phone {
+    display: none;
+  }
+  .modal-apply__connection-socials a {
+    width: 32px;
+    height: 32px;
+  }
+  .modal-success {
+    width: 288px;
+    padding: 60px 20px;
   }
 }
 .accounting-services__cont {

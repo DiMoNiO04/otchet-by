@@ -164,6 +164,12 @@ main {
   margin-top: 126px;
 }
 
+.disable-scroll {
+  .header {
+    padding-right: 18px;
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .section {
     margin-top: 100px;

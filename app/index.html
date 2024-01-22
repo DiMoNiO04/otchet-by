@@ -23,10 +23,108 @@
 
         <h2>Модальные окна:</h2>
         <ol>
-          <li></li>
+          <li>
+            <button class="btn-reset" data-graph-path="modal-apply">Получить коммерческое предложение</button>
+          </li>
+          <li>
+            <button class="btn-reset" data-graph-path="modal-success">Ваша заявка была успешно отправлена</button>
+          </li>
         </ol>
       </div>
     </main>
+
+    <div class="graph-modal">
+  <div class="graph-modal__container modal-apply" role="dialog" aria-modal="true" data-graph-target="modal-apply">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#close-modal"></use>
+      </svg>
+    </button>
+    <div class="modal-apply__container">
+      <div class="modal-apply__content">
+        <div class="modal-apply__titles">
+          <h2 class="h2">Получить коммерческое предложение</h2>
+          <p class="modal-apply__subtitle">Перезвоним и ответим на все интересующие Вас вопросы</p>
+        </div>
+        <div class="modal-apply__forms">
+          <form id="modal-apply" class="modal-apply__form">
+            <div class="modal-apply__form-inputs">
+              <div class="modal-apply__input input">
+                <div class="input__head">Имя</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Ваше имя" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="modal-apply__input input">
+                <div class="input__head">Телефон</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Ваш телефон" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </div>
+            <div class="modal-apply__btns">
+              <button type="submit" class="modal-apply__btn btn btn-prim" form="modal-apply">
+                <span>Продолжить</span>
+              </button>
+            </div>
+          </form>
+          <p class="modal-apply__policy">
+            Заполняя форму обратной связи, Вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
+          </p>
+        </div>
+        <div class="modal-apply__connection">
+          <div class="modal-apply__connection-title">Свяжитесь с нами прямо сейчас!</div>
+          <div class="modal-apply__connection-content">
+            <div class="modal-apply__connection-socials socials">
+              <a href="#" class="socials__whatsapp">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+                </svg>
+              </a>
+              <a href="#" class="socials__viber">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#viber"></use>
+                </svg>
+              </a>
+              <a href="#" class="socials__telegram">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </div>
+            <a href="tel:+375447178585" class="modal-apply__connection-phone"> +375 (44) 717 85 85 </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-apply__img">
+        <picture>
+          <source media="(min-width: 1198px)" srcset="assets/img/apply/apply.png" />
+          <img src="assets/img/apply/apply-mob.png" alt="" />
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <div class="graph-modal__container modal-success" role="dialog" aria-modal="true" data-graph-target="modal-success">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="assets/img/sprite.svg#close-modal"></use>
+      </svg>
+    </button>
+    <div class="modal-success__container">
+      <h2 class="h2">Спасибо</h2>
+      <p class="modal-success__txt">Ваша заявка была успешно отправлена. В ближайшее время мы свяжемся с вами.</p>
+      <button class="modal-success__btn btn-reset btn btn-prim js-modal-close" aria-label="Хорошо">
+        <span>Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU"></script>
+<script src="./js/main.js"></script>
 
   </body>
 

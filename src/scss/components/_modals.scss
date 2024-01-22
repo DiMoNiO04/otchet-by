@@ -1,0 +1,259 @@
+.graph-modal {
+  background: rgba(15, 14, 14, 0.4);
+  backdrop-filter: blur(2px);
+  @include flexCenter;
+
+  &::before {
+    display: none;
+  }
+
+  &__close {
+    background: none;
+    top: 20px;
+    right: 20px;
+    @include sizes(32px, 32px);
+
+    svg {
+      @include fullSize;
+      stroke: $grey;
+      stroke-width: 1.5;
+      @include transition(stroke);
+    }
+
+    @include hover {
+      svg {
+        stroke: $text;
+      }
+    }
+  }
+
+  &__container {
+    border-radius: 8px;
+    background-color: $white;
+  }
+
+  .h2 {
+    margin: 0;
+  }
+}
+
+.modal-apply {
+  width: 1120px;
+  padding: 56px 56px 0 60px;
+
+  &__container {
+    @include flexEndBetween;
+  }
+
+  &__content {
+    @include flexColumn;
+    row-gap: 32px;
+    padding-bottom: 60px;
+  }
+
+  &__titles {
+    @include flexColumn;
+    row-gap: 20px;
+  }
+
+  &__subtitle {
+    @include regular14;
+    color: $greyTxt;
+  }
+
+  &__img {
+    @include sizes(251px, 368px);
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__forms {
+    @include flexColumn;
+    row-gap: 20px;
+  }
+
+  &__form,
+  &__form-inputs {
+    @include flexEndBetween;
+    column-gap: 20px;
+  }
+
+  &__input {
+    width: 260px;
+  }
+
+  &__policy {
+    @include regular14;
+    color: $greyTxt;
+
+    a {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+      @include transition(border-color);
+      @include hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__connection-title {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 130%;
+  }
+
+  &__connection-content {
+    @include flexCenterBetween;
+    width: fit-content;
+    column-gap: 20px;
+  }
+
+  &__connection-phone {
+    @include regular14;
+    color: $accent;
+    @include transition(color);
+    @include hover {
+      color: $redHover;
+    }
+  }
+}
+
+.modal-success {
+  width: 406px;
+  padding: 60px;
+
+  &__container {
+    @include flexColumn;
+    align-items: center;
+    row-gap: 24px;
+  }
+
+  &__txt {
+    @include regular14;
+    color: $greyTxt;
+    text-align: center;
+    text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .modal-apply {
+    width: 688px;
+    padding: 56px 0 0 48px;
+
+    .h2 {
+      width: 350px;
+    }
+
+    &__content {
+      width: 290px;
+      row-gap: 24px;
+    }
+
+    &__container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__titles {
+      row-gap: 16px;
+    }
+
+    &__form,
+    &__form-inputs {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__form {
+      row-gap: 24px;
+    }
+
+    &__forms {
+      row-gap: 16px;
+    }
+
+    &__form-inputs {
+      row-gap: 16px;
+    }
+
+    &__input,
+    &__btns,
+    &__btns button {
+      width: 100%;
+    }
+
+    &__img {
+      @include sizes(354px, 520px);
+      position: absolute;
+      right: -14px;
+      bottom: 0;
+    }
+
+    &__policy {
+      line-height: 140%;
+    }
+
+    &__connection-socials {
+      .socials__telegram svg {
+        fill: $blue;
+      }
+
+      .socials__viber svg {
+        fill: $purple;
+      }
+
+      .socials__whatsapp svg {
+        fill: $green;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .modal-apply {
+    width: 100%;
+    padding: 52px 16px;
+    border-radius: 0;
+    height: 100vh;
+    margin: 0;
+
+    &__img {
+      display: none;
+    }
+
+    .h2,
+    &__content {
+      width: 100%;
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__form {
+      row-gap: 20px;
+    }
+
+    &__connection-title {
+      margin-bottom: 16px;
+    }
+
+    &__connection-phone {
+      display: none;
+    }
+
+    &__connection-socials {
+      a {
+        @include sizes(32px, 32px);
+      }
+    }
+  }
+
+  .modal-success {
+    width: 288px;
+    padding: 60px 20px;
+  }
+}

@@ -15,13 +15,17 @@
 
         <h2>Модальные окна:</h2>
         <ol>
-          <li></li>
+          <li>
+            <button class="btn-reset" data-graph-path="modal-apply">Получить коммерческое предложение</button>
+          </li>
+          <li>
+            <button class="btn-reset" data-graph-path="modal-success">Ваша заявка была успешно отправлена</button>
+          </li>
         </ol>
       </div>
     </main>
 
-    @include('html/templates/modals.html')
-    <!-- @include('html/templates/scripts.html') -->
+    @include('html/templates/modals.html') @include('html/templates/scripts.html')
   </body>
 
   <style>
