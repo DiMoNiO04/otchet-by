@@ -80,6 +80,42 @@
   }
 }
 
+.btn-sec {
+  @include transition(border-color);
+  border: 1px solid $accent;
+
+  span {
+    @include regular14;
+    @include transition(color);
+    color: $accent;
+  }
+
+  &:not(:disabled) {
+    @include hover {
+      border-color: $redHover;
+
+      span {
+        color: $redHover;
+      }
+    }
+  }
+
+  &:disabled {
+    border-color: $greyDivider;
+    span {
+      color: $greyDivider;
+    }
+  }
+
+  &:not(:disabled):active {
+    border-color: $redPressed;
+
+    span {
+      color: $redPressed;
+    }
+  }
+}
+
 @media screen and (max-width: $mob) {
   .btn {
     width: 100%;

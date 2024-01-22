@@ -114,6 +114,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_map_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scripts_map_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _scripts_inputs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/inputs.js */ "./src/js/scripts/inputs.js");
 /* harmony import */ var _scripts_inputs_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scripts_inputs_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _scripts_header_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/header.js */ "./src/js/scripts/header.js");
+
 
 
 
@@ -184,7 +186,7 @@ const isMobile = () => {
   return false;
 };
 const isTablet = () => {
-  if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
+  if (window.innerWidth >= 767 && window.innerWidth < 1198) {
     return true;
   }
   return false;
@@ -222,6 +224,37 @@ const mobileCheck = () => {
     return 'iOS';
   }
   return 'unknown';
+};
+
+/***/ }),
+
+/***/ "./src/js/scripts/animation.js":
+/*!*************************************!*\
+  !*** ./src/js/scripts/animation.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   fadeIn: () => (/* binding */ fadeIn),
+/* harmony export */   fadeOut: () => (/* binding */ fadeOut)
+/* harmony export */ });
+const fadeIn = (el, timeout, display) => {
+  el.style.opacity = 0;
+  el.style.display = display || 'block';
+  el.style.transition = `opacity ${timeout}ms`;
+  setTimeout(() => {
+    el.style.opacity = 1;
+  }, 10);
+};
+const fadeOut = (el, timeout) => {
+  el.style.opacity = 1;
+  el.style.transition = `opacity ${timeout}ms`;
+  el.style.opacity = 0;
+  setTimeout(() => {
+    el.style.display = 'none';
+  }, timeout);
 };
 
 /***/ }),
@@ -272,9 +305,107 @@ function dropdownShowHide() {
       dropdownInner.toggleClass('active');
     });
   });
+  $('.js-dropdown-sub').each(function () {
+    const dropdown = $(this);
+    const dropdownInner = dropdown.find('.js-dropdown-sub-inner');
+    const dropdownContent = dropdown.find('.js-dropdown-sub-content');
+    dropdownInner.on('click', () => {
+      dropdownContent.slideToggle();
+      dropdownInner.toggleClass('active');
+    });
+  });
 }
 window.addEventListener('DOMContentLoaded', () => {
   dropdownShowHide();
+});
+
+/***/ }),
+
+/***/ "./src/js/scripts/header.js":
+/*!**********************************!*\
+  !*** ./src/js/scripts/header.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/check-viewport */ "./src/js/functions/check-viewport.js");
+/* harmony import */ var _animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./animation */ "./src/js/scripts/animation.js");
+
+
+function toggleSearch() {
+  const searchOpen = document.querySelector('.js-search-open');
+  const searchClose = document.querySelector('.js-search-close');
+  const searchForm = document.querySelector('.js-search-form');
+  const socials = document.querySelector('.js-header-socials');
+  searchOpen.addEventListener('click', () => {
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeIn)(searchForm, 500, 'flex');
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeOut)(searchOpen, 0);
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeIn)(searchClose, 500, 'flex');
+    if ((0,_functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__.isTablet)()) {
+      (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeOut)(socials, 0);
+    }
+  });
+  searchClose.addEventListener('click', () => {
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeOut)(searchForm, 0);
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeOut)(searchClose, 0);
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeIn)(searchOpen, 500, 'flex');
+    if ((0,_functions_check_viewport__WEBPACK_IMPORTED_MODULE_0__.isTablet)()) {
+      (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeIn)(socials, 0, 'flex');
+    }
+  });
+}
+function toggleBurgerMenu() {
+  const burgerOpen = document.querySelector('.js-burger-open');
+  const burgerClose = document.querySelector('.js-burger-close');
+  const burgerMenu = document.querySelector('.js-burger-menu');
+  burgerOpen.addEventListener('click', () => {
+    burgerMenu.classList.add('active');
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeOut)(burgerOpen, 0);
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeIn)(burgerClose, 500, 'flex');
+  });
+  burgerClose.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeOut)(burgerClose, 0);
+    (0,_animation__WEBPACK_IMPORTED_MODULE_1__.fadeIn)(burgerOpen, 500, 'flex');
+  });
+}
+function hoverLink() {
+  const links = document.querySelectorAll('.js-header-link');
+  links.forEach(link => {
+    const linkMenu = link.querySelector('.js-header-links');
+    link.addEventListener('mouseover', function () {
+      linkMenu.classList.add('active');
+      this.classList.add('active');
+    });
+    link.addEventListener('mouseout', () => {
+      linkMenu.classList.remove('active');
+      links.forEach(li => li.classList.remove('active'));
+    });
+  });
+}
+function hoverSubLinks() {
+  const links = document.querySelectorAll('.js-header-sublink');
+  const mainLinks = document.querySelector('.js-header-links');
+  links.forEach(link => {
+    const linkMenu = link.querySelector('.js-header-sublinks');
+    link.addEventListener('mouseover', function () {
+      this.classList.add('active');
+      linkMenu.classList.add('active');
+      mainLinks.classList.add('hover');
+    });
+    link.addEventListener('mouseout', () => {
+      linkMenu.classList.remove('active');
+      mainLinks.classList.remove('hover');
+      links.forEach(li => li.classList.remove('active'));
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  toggleSearch();
+  toggleBurgerMenu();
+  hoverLink();
+  hoverSubLinks();
 });
 
 /***/ }),

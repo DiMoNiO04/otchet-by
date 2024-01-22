@@ -1,0 +1,562 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+
+  &__top {
+    background-color: $grayBg;
+  }
+
+  &__top-container {
+    @include flexCenterBetween;
+    padding: 12px 0;
+  }
+
+  &__top-location {
+    @include flexCenterStart;
+    column-gap: 4px;
+
+    svg {
+      @include sizes(16px, 16px);
+      fill: none;
+      stroke: $greyTxt;
+    }
+
+    p {
+      @include regular14;
+      color: $greyTxt;
+    }
+  }
+
+  &__top-panel {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+  }
+
+  &__top-time,
+  &__top-email {
+    @include regular14;
+    color: $greyTxt;
+  }
+
+  &__top-email {
+    @include transition(color);
+    @include hover {
+      color: $text;
+    }
+  }
+
+  &__top-search {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  &__top-form {
+    display: none;
+    column-gap: 12px;
+
+    input,
+    input::placeholder {
+      @include regular14;
+    }
+
+    input::placeholder {
+      color: #999;
+    }
+
+    input {
+      color: #000;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: transparent;
+      width: 180px;
+    }
+
+    button {
+      span {
+        @include regular14;
+        @include transition(color);
+        color: $accent;
+      }
+
+      @include hover {
+        span {
+          color: $redHover;
+        }
+      }
+    }
+  }
+
+  &__top-search-btns {
+    position: relative;
+    @include sizes(24px, 24px);
+  }
+
+  &__top-search-btn {
+    cursor: pointer;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+    @include fullSize;
+
+    svg {
+      @include transition(fill);
+      stroke-width: 1.5;
+    }
+
+    &:first-child {
+      svg {
+        fill: $grey;
+      }
+
+      @include hover {
+        svg {
+          fill: $greyTxt;
+        }
+      }
+    }
+
+    &:last-child {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      svg {
+        fill: none;
+        stroke: $grey;
+      }
+
+      @include hover {
+        svg {
+          stroke: $greyTxt;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: $white;
+  }
+
+  &__bottom-container {
+    padding: 16px 0;
+    @include flexCenterBetween;
+    column-gap: 20px;
+  }
+
+  &__logo {
+    svg {
+      fill: $accent;
+    }
+  }
+
+  &__bottom-list {
+    display: flex;
+    align-items: center;
+    column-gap: 28px;
+  }
+
+  &__bottom-item {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    position: relative;
+    cursor: pointer;
+
+    & > a,
+    & > p {
+      @include regular16;
+      color: $greyTxt;
+      @include transition(color);
+    }
+
+    & > svg {
+      @include sizes(16px, 16px);
+      fill: none;
+      stroke-width: 1.5;
+      stroke: $greyTxt;
+      transition:
+        transform 0.2s ease,
+        stroke 0.2s ease;
+    }
+
+    &.active {
+      & > a,
+      & > p {
+        color: $accent;
+      }
+
+      & > svg {
+        stroke: $accent;
+        transform: rotate(180deg);
+      }
+    }
+
+    @include hover {
+      & > a,
+      & > p {
+        color: $accent;
+      }
+
+      & > svg {
+        transform: rotate(180deg);
+        stroke: $accent;
+      }
+    }
+  }
+
+  &__bottom-links {
+    padding: 32px;
+    border-radius: 8px;
+    background: $white;
+    box-shadow: 0px 7px 14px 0px rgba(11, 31, 53, 0.1);
+    position: absolute;
+    top: 22px;
+    left: -32px;
+    height: fit-content;
+    width: 320px;
+    @include hidden;
+    z-index: -2;
+
+    &.active {
+      @include visible;
+      z-index: 2;
+    }
+
+    &.hover {
+      width: 870px;
+      .header__bottom-link {
+        padding-right: 40px;
+      }
+    }
+  }
+
+  &__bottom-link {
+    @include mb(16px);
+    width: 242px;
+    box-sizing: content-box;
+
+    & > a,
+    p {
+      @include regular14;
+      color: $greyTxt;
+      @include transition(color);
+    }
+
+    svg {
+      @include transition(stroke);
+      flex-shrink: 0;
+      @include sizes(16px, 16px);
+      fill: none;
+      stroke: $text;
+    }
+
+    @include hover {
+      & > a,
+      p {
+        color: $accent;
+      }
+
+      svg {
+        stroke: $accent;
+      }
+    }
+
+    &.active {
+      & > a,
+      p {
+        color: $accent;
+      }
+
+      svg {
+        stroke: $accent;
+      }
+    }
+  }
+
+  &__bottom-sublink {
+    @include flexStart;
+    column-gap: 4px;
+  }
+
+  &__bottom-submenu {
+    position: absolute;
+    box-sizing: border-box;
+    width: 550px;
+    height: 100%;
+    left: 316px;
+    top: 0;
+    padding: 32px;
+    border-radius: 0 4px 4px 0;
+    @include flexColumn;
+    row-gap: 16px;
+    display: none;
+    border-left: 1px solid $greyDivider;
+
+    &.active {
+      display: flex;
+    }
+
+    a {
+      @include transition(color);
+      @include regular14;
+      color: $greyTxt;
+    }
+
+    li {
+      @include hover {
+        a {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  &__top {
+    .header__logo {
+      display: none;
+    }
+  }
+
+  &__top-phone,
+  &__top-burger,
+  &__menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .header {
+    &__bottom,
+    &__top-location,
+    &__top-email,
+    &__top-time {
+      display: none;
+    }
+
+    &__bottom-list {
+      position: absolute;
+    }
+
+    &__top {
+      background-color: $white;
+
+      .header__logo {
+        display: flex;
+      }
+    }
+
+    &__top-phone {
+      display: block;
+      @include regular14;
+      color: $accent;
+      @include transition(color);
+      @include hover {
+        color: $redHover;
+      }
+    }
+
+    &__top-burger {
+      position: relative;
+      @include sizes(24px, 24px);
+
+      &-btn {
+        @include fullSize;
+
+        &:last-child {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: none;
+        }
+
+        svg {
+          stroke: $greyTxt;
+          stroke-width: 1.5;
+        }
+      }
+    }
+
+    &__top-burger {
+      display: block;
+    }
+
+    &__menu {
+      @include flexColumn;
+      row-gap: 24px;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      background-color: $white;
+      height: calc(100vh - 64px);
+      width: 100%;
+      padding: 24px 40px;
+      overflow: scroll;
+      transform: translateX(-200%);
+      transition: transform 0.5s ease;
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+
+    &__menu-form {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      border-radius: 4px;
+      border: 1px solid $greyDivider;
+
+      button {
+        @include sizes(16px, 16px);
+        margin: 15px 0 14px 15px;
+
+        svg {
+          fill: $greyTxt;
+        }
+      }
+
+      input {
+        margin: 0;
+        padding: 15px 15px 14px 0;
+        border: none;
+        background-color: transparent;
+        width: 100%;
+        color: $text;
+
+        &::placeholder {
+          color: $greyTxt;
+        }
+      }
+
+      input,
+      input::placeholder {
+        @include regular14;
+      }
+    }
+
+    &__menu-link {
+      @include regular14;
+      color: $accent;
+    }
+
+    &__menu-socials {
+      display: none;
+
+      .socials__telegram svg {
+        fill: $blue;
+      }
+
+      .socials__viber svg {
+        fill: $green;
+      }
+
+      .socials__whatsapp svg {
+        fill: $purple;
+      }
+    }
+
+    &__menu-items {
+      @include flexColumn;
+      row-gap: 8px;
+    }
+
+    &__menu-item {
+      padding: 8px 0;
+      & > a,
+      & > p {
+        @include regular16;
+        color: $greyTxt;
+      }
+    }
+
+    &__menu-tit,
+    &__menu-subtit {
+      @include flexCenterBetween;
+      column-gap: 24px;
+
+      svg {
+        @include sizes(20px, 20px);
+        fill: none;
+        stroke: $greyTxt;
+        flex-shrink: 0;
+        stroke-width: 1.5;
+        @include transition(transform);
+      }
+
+      &.active {
+        p {
+          color: $accent;
+        }
+
+        svg {
+          stroke: $accent;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__menu-sub {
+      padding-top: 12px;
+      display: none;
+    }
+
+    &__menu-sublink {
+      padding: 8px 0;
+      @include mb(8px);
+
+      & > a,
+      p {
+        @include regular14;
+        color: $greyTxt;
+      }
+    }
+
+    &__menu-sublist {
+      padding-top: 16px;
+      display: none;
+
+      a {
+        @include regular14;
+        color: $greyTxt;
+      }
+    }
+
+    &__menu-subli {
+      @include mb(12px);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .header {
+    &__top-socials,
+    &__top-search {
+      display: none;
+    }
+
+    &__top-panel {
+      column-gap: 16px;
+    }
+
+    &__logo {
+      span {
+        display: none;
+      }
+    }
+
+    &__menu-socials {
+      display: flex;
+    }
+
+    &__menu {
+      padding: 24px 16px;
+    }
+  }
+}

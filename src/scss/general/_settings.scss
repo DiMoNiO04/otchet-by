@@ -160,9 +160,17 @@ fieldset {
   margin-top: 120px;
 }
 
+main {
+  margin-top: 126px;
+}
+
 @media screen and (max-width: $tablet) {
   .section {
     margin-top: 100px;
+  }
+
+  main {
+    margin-top: 64px;
   }
 }
 

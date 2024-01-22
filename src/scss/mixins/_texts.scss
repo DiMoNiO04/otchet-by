@@ -8,6 +8,11 @@
   line-height: 125%;
 }
 
+@mixin regular16 {
+  font-size: 16px;
+  line-height: 130%;
+}
+
 @mixin bold20 {
   font-size: 20px;
   font-weight: 600;
