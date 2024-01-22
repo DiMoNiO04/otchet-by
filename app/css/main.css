@@ -218,7 +218,7 @@ fieldset {
 }
 
 .section {
-  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 main {
@@ -231,7 +231,7 @@ main {
 
 @media screen and (max-width: 1198px) {
   .section {
-    margin-top: 100px;
+    margin-bottom: 100px;
   }
   main {
     margin-top: 64px;
@@ -2831,6 +2831,30 @@ main {
     padding: 60px 20px;
   }
 }
+.bussines-partners__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 1918px) {
+  .bussines-partners__items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 766px) {
+  .bussines-partners__items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .accounting-services__cont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2917,30 +2941,6 @@ main {
     display: grid;
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
-  }
-}
-.bussines-partners__items {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 20px;
-}
-
-@media screen and (max-width: 1918px) {
-  .bussines-partners__items {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 766px) {
-  .bussines-partners__items {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 .tarifs__titles {
