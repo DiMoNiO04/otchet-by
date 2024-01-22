@@ -112,6 +112,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_content_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scripts_content_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _scripts_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/map.js */ "./src/js/scripts/map.js");
 /* harmony import */ var _scripts_map_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scripts_map_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _scripts_inputs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/inputs.js */ "./src/js/scripts/inputs.js");
+/* harmony import */ var _scripts_inputs_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scripts_inputs_js__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -297,6 +300,40 @@ function hoverTxtCard() {
   }
 }
 hoverTxtCard();
+
+/***/ }),
+
+/***/ "./src/js/scripts/inputs.js":
+/*!**********************************!*\
+  !*** ./src/js/scripts/inputs.js ***!
+  \**********************************/
+/***/ (() => {
+
+function inputsDef() {
+  if (document.querySelector('.input')) {
+    const inputs = document.querySelectorAll('.input');
+    inputs.forEach(input => {
+      const inp = input.querySelector('input');
+      if (inp.getAttribute('disabled') !== null) {
+        input.classList.add('--disabled');
+      } else {
+        input.classList.remove('-disabled');
+      }
+    });
+    inputs.forEach(input => {
+      const inp = input.querySelector('input');
+      const inpBlock = input.querySelector('.input__input');
+      if (inpBlock) {
+        inpBlock.addEventListener('click', () => inp.focus());
+        inp.addEventListener('focus', () => input.classList.add('--focus'));
+        inp.addEventListener('blur', () => input.classList.remove('--focus'));
+      }
+    });
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  inputsDef();
+});
 
 /***/ }),
 
