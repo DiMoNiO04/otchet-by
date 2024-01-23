@@ -44,6 +44,16 @@
   letter-spacing: -0.4px;
 }
 
+@mixin medium26 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 125%;
+
+  @media screen and (max-width: $mob) {
+    font-size: 20px;
+  }
+}
+
 @mixin h1 {
   font-family: 'PF Agora Sans Pro', sans-serif;
   font-size: 48px;

@@ -1,0 +1,126 @@
+.cost {
+  &__container {
+    @include flexColumn;
+    row-gap: 32px;
+  }
+
+  &__titles {
+    .h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitles {
+    @include grid(2);
+    column-gap: 20px;
+
+    p {
+      @include regular14;
+      color: $greyTxt;
+    }
+  }
+
+  &__content {
+    border-radius: 8px;
+    border: 1px solid $greyDivider;
+    padding: 40px;
+    @include flexCenter;
+    column-gap: 40px;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    @include sizes(252px, auto);
+  }
+
+  &__block {
+    @include flexColumn;
+    row-gap: 20px;
+  }
+
+  &__block-price {
+    @include medium26;
+  }
+
+  &__block-items {
+    @include flexStartBetween;
+    column-gap: 48px;
+    padding: 4px 0;
+  }
+
+  &__block-btns {
+    flex-shrink: 0;
+    @include flexColumn;
+    row-gap: 16px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .content {
+    p {
+      color: $greyTxt;
+      @include mb(12px);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cost {
+    &__subtitles {
+      @include grid(1);
+      row-gap: 12px;
+    }
+
+    &__content {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+
+    &__img {
+      @include sizes(252px, 200px);
+    }
+
+    &__block-items {
+      flex-direction: column;
+      row-gap: 40px;
+      padding: 0;
+    }
+
+    &__block-btns {
+      flex-direction: row;
+      column-gap: 16px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .cost {
+    &__container,
+    &__block-items {
+      row-gap: 24px;
+    }
+
+    &__titles {
+      .h2 {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__content {
+      padding: 20px;
+      row-gap: 20px;
+    }
+
+    &__img {
+      @include sizes(248px, 200px);
+    }
+
+    &__block-btns {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+}
