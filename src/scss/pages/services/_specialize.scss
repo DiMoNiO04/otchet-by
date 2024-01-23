@@ -1,0 +1,68 @@
+.specialize {
+  &__blocks {
+    @include flexColumn;
+    row-gap: 32px;
+  }
+
+  .h2 {
+    margin-bottom: 0;
+  }
+
+  &__container {
+    @include flexColumn;
+    row-gap: 32px;
+  }
+
+  &__block {
+    @include grid(2);
+    column-gap: 32px;
+  }
+
+  &__tit {
+    @include bold16;
+    margin-bottom: 12px;
+  }
+
+  &__lists {
+    @include flexColumn;
+    row-gap: 20px;
+  }
+
+  &__img {
+    img {
+      border-radius: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .specialize {
+    &__block {
+      @include grid(1);
+      row-gap: 32px;
+
+      &:last-child {
+        .specialize__img {
+          order: 1;
+        }
+      }
+    }
+
+    &__img {
+      @include sizes(100%, 300px);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .specialize {
+    &__container,
+    &__block {
+      row-gap: 24px;
+    }
+
+    &__img {
+      height: 240px;
+    }
+  }
+}
