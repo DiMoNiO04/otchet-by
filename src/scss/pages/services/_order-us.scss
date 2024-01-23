@@ -1,0 +1,55 @@
+.order-us {
+  &__items {
+    @include grid(3);
+    grid-auto-rows: minmax(272px, 1fr);
+    grid-gap: 20px;
+
+    li {
+      border-radius: 8px;
+      background: $grayBg;
+      padding: 24px;
+
+      img {
+        @include sizes(32px, 32px);
+        margin-bottom: 40px;
+      }
+
+      b {
+        @include medium20;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      p {
+        @include regular14;
+        color: $greyTxt;
+        text-wrap: balance;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .order-us {
+    &__items {
+      @include grid(2);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .order-us {
+    &__items {
+      @include grid(1);
+      grid-auto-rows: minmax(230px, 1fr);
+
+      li {
+        padding: 20px;
+
+        b {
+          @include bold16;
+        }
+      }
+    }
+  }
+}
