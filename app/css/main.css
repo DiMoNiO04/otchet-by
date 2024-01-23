@@ -4234,3 +4234,39 @@ main {
     height: 240px;
   }
 }
+.acc-tax-serv .h2 {
+  margin-bottom: 32px;
+  max-width: 650px;
+  text-wrap: balance;
+}
+.acc-tax-serv__block {
+  width: 550px;
+}
+.acc-tax-serv__block {
+  background-color: transparent;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #eeeff1;
+}
+.acc-tax-serv .content ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1198px) {
+  .acc-tax-serv__blocks {
+    width: 550px;
+  }
+  .acc-tax-serv .content ul li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 1198px) {
+  .acc-tax-serv .h2 {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  .acc-tax-serv__block {
+    width: 100%;
+    padding: 20px;
+  }
+}

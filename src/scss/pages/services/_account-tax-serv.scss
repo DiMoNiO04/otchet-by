@@ -1,0 +1,52 @@
+.acc-tax-serv {
+  .h2 {
+    margin-bottom: 32px;
+    max-width: 650px;
+    text-wrap: balance;
+  }
+
+  &__block {
+    width: 550px;
+  }
+
+  &__block {
+    background-color: transparent;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid $greyDivider;
+  }
+
+  .content {
+    ul li {
+      @include mb(12px);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .acc-tax-serv {
+    &__blocks {
+      width: 550px;
+    }
+
+    .content {
+      ul li {
+        @include mb(8px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .acc-tax-serv {
+    .h2 {
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    &__block {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}
