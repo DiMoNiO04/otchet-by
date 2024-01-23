@@ -1,0 +1,53 @@
+.cost-maintainance {
+  padding: 120px 0;
+  background-color: $grayBg;
+
+  .h2 {
+    margin-bottom: 32px;
+  }
+
+  &__blocks {
+    @include grid(2);
+    column-gap: 20px;
+  }
+
+  .content p {
+    margin: 0;
+  }
+
+  &__content {
+    @include flexColumn;
+    row-gap: 20px;
+
+    p {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cost-maintainance {
+    padding: 100px 0;
+
+    &__blocks {
+      @include grid(1);
+      row-gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      row-gap: 0;
+
+      p {
+        width: 100%;
+        @include mb(12px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .cost-maintainance {
+    padding: 60px 0;
+  }
+}

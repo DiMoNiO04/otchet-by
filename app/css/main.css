@@ -516,6 +516,36 @@ main {
 .content p:not(:last-child) {
   margin-bottom: 8px;
 }
+.content ul li {
+  font-size: 14px;
+  line-height: 130%;
+  color: #555152;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-column-gap: 4px;
+  -moz-column-gap: 4px;
+  column-gap: 4px;
+}
+.content ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.content ul li::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../assets/img/bullet.svg);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
 
 .card {
   border-radius: 8px;
@@ -3928,5 +3958,65 @@ main {
     font-size: 16px;
     font-weight: 500;
     line-height: 125%;
+  }
+}
+.cost-maintainance {
+  padding: 120px 0;
+  background-color: #f7f7f7;
+}
+.cost-maintainance .h2 {
+  margin-bottom: 32px;
+}
+.cost-maintainance__blocks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+.cost-maintainance .content p {
+  margin: 0;
+}
+.cost-maintainance__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.cost-maintainance__content p {
+  width: 50%;
+}
+
+@media screen and (max-width: 1198px) {
+  .cost-maintainance {
+    padding: 100px 0;
+  }
+  .cost-maintainance__blocks {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 8px;
+    margin-bottom: 20px;
+  }
+  .cost-maintainance__content {
+    row-gap: 0;
+  }
+  .cost-maintainance__content p {
+    width: 100%;
+  }
+  .cost-maintainance__content p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 766px) {
+  .cost-maintainance {
+    padding: 60px 0;
   }
 }

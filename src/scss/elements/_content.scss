@@ -3,4 +3,25 @@
     @include mb(8px);
     @include regular14;
   }
+
+  ul {
+    li {
+      @include mb(8px);
+      @include regular14;
+      color: $greyTxt;
+      position: relative;
+      @include flexStart;
+      column-gap: 4px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url(../assets/img/bullet.svg);
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+    }
+  }
 }
