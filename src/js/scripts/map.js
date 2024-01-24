@@ -16,9 +16,7 @@ function removeContent(mainMap) {
 function initContactsMap() {
   let left;
 
-  if (window.innerWidth >= 1198) {
-    left = 0.01;
-  } else if (window.innerWidth < 1198 && window.innerWidth >= 768) {
+  if (window.innerWidth >= 768) {
     left = 0.004;
   } else {
     left = 0;

@@ -6,6 +6,14 @@
   }
 }
 
+.office__map#map {
+  @include sizes(740px, 300px);
+
+  [class*='ymaps'] {
+    border-radius: 8px;
+  }
+}
+
 [class*='gototech'],
 [class*='copyrights-pane'],
 [class*='controls__control'],
@@ -19,10 +27,18 @@
   #map {
     height: 460px;
   }
+
+  .office__map#map {
+    @include sizes(100%, 300px);
+  }
 }
 
 @media screen and (max-width: $mob) {
   #map {
     height: 450px;
+  }
+
+  .office__map#map {
+    border-radius: 0;
   }
 }
