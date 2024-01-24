@@ -2,6 +2,7 @@
   p {
     @include mb(8px);
     @include regular14;
+    color: $greyTxt;
   }
 
   ul {

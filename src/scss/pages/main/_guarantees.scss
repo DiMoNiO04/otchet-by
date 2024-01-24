@@ -9,10 +9,6 @@
     }
   }
 
-  &__txts p {
-    color: $greyTxt;
-  }
-
   &__list {
     @include grid(3);
     grid-gap: 20px;

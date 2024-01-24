@@ -79,4 +79,12 @@
       }
     }
   }
+
+  .order-us--about {
+    .order-us {
+      &__items {
+        grid-auto-rows: auto;
+      }
+    }
+  }
 }

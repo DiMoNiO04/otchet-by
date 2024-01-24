@@ -9,10 +9,6 @@
     margin-bottom: 40px;
   }
 
-  &__txts p {
-    color: $greyTxt;
-  }
-
   &__content {
     @include grid(2);
     grid-gap: 20px;
