@@ -1978,6 +1978,10 @@ main {
   -ms-flex-pack: center;
   justify-content: center;
 }
+.baner__img {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
 
 .baner--main {
   padding-top: 40px;
@@ -1985,8 +1989,6 @@ main {
 .baner--main .baner__img {
   width: 464px;
   height: 450px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
 }
 .baner--main .baner__content {
   -webkit-column-gap: 150px;
@@ -2094,10 +2096,40 @@ main {
 .baner--service .baner__img {
   width: 460px;
   height: 520px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
   position: relative;
   left: 24px;
+}
+
+.baner--about .baner__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 80px;
+}
+.baner--about .baner__content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 32px;
+  max-width: 550px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.baner--about .baner__img {
+  width: 362px;
+  height: 357px;
+  position: absolute;
+  bottom: 0;
+  right: 78px;
 }
 
 @media screen and (max-width: 1918px) {
@@ -2106,6 +2138,9 @@ main {
     -moz-column-gap: 115px;
     column-gap: 115px;
     padding-right: 12px;
+  }
+  .baner--about .baner__img {
+    right: 86px;
   }
 }
 @media screen and (max-width: 1198px) {
@@ -2161,6 +2196,24 @@ main {
     font-size: 28px;
     line-height: 125%;
   }
+  .baner--about .container {
+    padding: 0 40px;
+  }
+  .baner--about .baner__img {
+    width: 354px;
+    height: 349px;
+    right: -40px;
+  }
+  .baner--about .baner__content {
+    max-width: 460px;
+    row-gap: 20px;
+  }
+  .baner--about .baner__container {
+    padding-bottom: 100px;
+  }
+  .baner--about .baner__txts {
+    margin-top: 12px;
+  }
 }
 @media screen and (max-width: 766px) {
   .baner--main {
@@ -2196,6 +2249,21 @@ main {
   }
   .baner--service .container {
     padding: 0 16px;
+  }
+  .baner--about .container {
+    padding: 0 16px;
+  }
+  .baner--about .baner__img {
+    display: none;
+  }
+  .baner--about .baner__content {
+    max-width: 100%;
+  }
+  .baner--about .baner__container {
+    padding-bottom: 60px;
+  }
+  .baner--about .baner__txts {
+    margin-top: 4px;
   }
 }
 .questions .h2 {
