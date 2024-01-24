@@ -1,0 +1,41 @@
+.breadcrumbs {
+  margin: 40px 0;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 4px;
+  row-gap: 8px;
+  width: 100%;
+
+  & > span {
+    @include regular14;
+    color: $text;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 4px;
+    flex-shrink: 0;
+
+    span {
+      @include regular14;
+      color: $greyTxt;
+    }
+
+    @include hover {
+      span:first-child {
+        color: $text;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .breadcrumbs {
+    margin: 32px 0;
+  }
+}

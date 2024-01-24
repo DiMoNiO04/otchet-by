@@ -36,6 +36,57 @@
   }
 }
 
+.baner--service {
+  .baner {
+    &__container {
+      display: flex;
+      column-gap: 40px;
+      align-items: flex-start;
+    }
+
+    &__content {
+      @include flexColumn;
+      row-gap: 32px;
+      align-items: flex-start;
+    }
+
+    &__items {
+      @include flexColumn;
+      row-gap: 20px;
+    }
+
+    &__item {
+      @include flexCenterStart;
+      column-gap: 12px;
+    }
+
+    &__txt {
+      @include regular14;
+      color: $greyTxt;
+      text-wrap: balance;
+    }
+
+    &__icon {
+      @include sizes(40px, 40px);
+      @include flexCenter;
+      border-radius: 4px;
+      background-color: $white;
+      padding: 8px;
+      flex-shrink: 0;
+
+      img {
+        @include sizes(24px, 24px);
+        object-fit: contain;
+      }
+    }
+
+    &__img {
+      @include sizes(460px, 520px);
+      flex-shrink: 0;
+    }
+  }
+}
+
 @media screen and (max-width: $laptop) {
   .baner--main {
     .baner {
@@ -83,15 +134,37 @@
       }
     }
   }
+
+  .baner--service {
+    .baner {
+      &__img {
+        @include sizes(306px, 347px);
+      }
+
+      &__container {
+        align-items: flex-end;
+      }
+
+      &__content {
+        padding-bottom: 80px;
+      }
+    }
+
+    .container {
+      padding-left: 40px;
+    }
+
+    .h1 {
+      font-size: 28px;
+      line-height: 125%;
+    }
+  }
 }
 
 @media screen and (max-width: $mob) {
-  .baner {
-    padding: 40px 16px 0;
-  }
-
   .baner--main {
     .baner {
+      padding: 40px 16px 0;
       &__content {
         padding: 0;
         flex-direction: column-reverse;
@@ -107,6 +180,27 @@
         top: 0;
         width: 100%;
       }
+    }
+  }
+
+  .baner--service {
+    .baner {
+      &__img {
+        display: none;
+      }
+
+      &__content {
+        padding-bottom: 60px;
+        row-gap: 24px;
+      }
+
+      .h1 {
+        font-size: 32px;
+      }
+    }
+
+    .container {
+      padding: 0 16px;
     }
   }
 }

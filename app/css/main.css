@@ -910,6 +910,58 @@ main {
   border-color: #e33b32;
 }
 
+.breadcrumbs {
+  margin: 40px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 4px;
+  -moz-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 8px;
+  width: 100%;
+}
+.breadcrumbs > span {
+  font-size: 14px;
+  line-height: 130%;
+  color: #241f20;
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.breadcrumbs a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 4px;
+  -moz-column-gap: 4px;
+  column-gap: 4px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.breadcrumbs a span {
+  font-size: 14px;
+  line-height: 130%;
+  color: #555152;
+}
+@media (any-hover: hover) {
+  .breadcrumbs a:hover span:first-child {
+    color: #241f20;
+  }
+}
+
+@media screen and (max-width: 1198px) {
+  .breadcrumbs {
+    margin: 32px 0;
+  }
+}
 .footer {
   background-color: #232628;
 }
@@ -1931,6 +1983,91 @@ main {
   top: -20px;
 }
 
+.baner--service .baner__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.baner--service .baner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 32px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.baner--service .baner__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.baner--service .baner__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+}
+.baner--service .baner__txt {
+  font-size: 14px;
+  line-height: 130%;
+  color: #555152;
+  text-wrap: balance;
+}
+.baner--service .baner__icon {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 8px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.baner--service .baner__icon img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.baner--service .baner__img {
+  width: 460px;
+  height: 520px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 1918px) {
   .baner--main .baner__content {
     -webkit-column-gap: 115px;
@@ -1972,9 +2109,28 @@ main {
     font-size: 14px;
     line-height: 130%;
   }
+  .baner--service .baner__img {
+    width: 306px;
+    height: 347px;
+  }
+  .baner--service .baner__container {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  .baner--service .baner__content {
+    padding-bottom: 80px;
+  }
+  .baner--service .container {
+    padding-left: 40px;
+  }
+  .baner--service .h1 {
+    font-size: 28px;
+    line-height: 125%;
+  }
 }
 @media screen and (max-width: 766px) {
-  .baner {
+  .baner--main .baner {
     padding: 40px 16px 0;
   }
   .baner--main .baner__content {
@@ -1993,6 +2149,19 @@ main {
   .baner--main .baner__cont {
     top: 0;
     width: 100%;
+  }
+  .baner--service .baner__img {
+    display: none;
+  }
+  .baner--service .baner__content {
+    padding-bottom: 60px;
+    row-gap: 24px;
+  }
+  .baner--service .baner .h1 {
+    font-size: 32px;
+  }
+  .baner--service .container {
+    padding: 0 16px;
   }
 }
 .questions__block {
