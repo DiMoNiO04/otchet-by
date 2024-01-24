@@ -5,6 +5,14 @@
   width: 100%;
   z-index: 4;
 
+  .socials a {
+    @include sizes(20px, 20px);
+  }
+
+  .socials {
+    column-gap: 6px;
+  }
+
   &__top {
     background-color: $grayBg;
   }
@@ -94,7 +102,7 @@
 
   &__top-search-btns {
     position: relative;
-    @include sizes(24px, 24px);
+    @include sizes(20px, 20px);
   }
 
   &__top-search-btn {
@@ -340,6 +348,18 @@
       display: none;
     }
 
+    .socials a {
+      @include sizes(24px, 24px);
+    }
+
+    .socials {
+      column-gap: 8px;
+    }
+
+    &__top-search-btns {
+      @include sizes(24px, 24px);
+    }
+
     &__bottom-list {
       position: absolute;
     }
@@ -364,10 +384,11 @@
 
     &__top-burger {
       position: relative;
-      @include sizes(24px, 24px);
+      @include sizes(40px, 40px);
 
       &-btn {
         @include fullSize;
+        padding: 8px;
 
         &:last-child {
           position: absolute;
@@ -546,6 +567,8 @@
     }
 
     &__logo {
+      @include sizes(40px, 40px);
+      justify-content: center;
       span {
         display: none;
       }

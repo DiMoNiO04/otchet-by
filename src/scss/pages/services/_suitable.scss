@@ -75,6 +75,7 @@
     }
 
     &__items {
+      grid-auto-rows: auto;
       li {
         padding: 20px;
       }

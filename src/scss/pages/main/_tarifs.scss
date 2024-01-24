@@ -1,6 +1,11 @@
 .tarifs {
   &__titles {
     @include flexCenterBetween;
+    margin-bottom: 40px;
+  }
+
+  .h2 {
+    margin: 0;
   }
 
   &__cards {
@@ -14,7 +19,7 @@
     border: 1px solid $greyDivider;
     background: $white;
     padding: 32px;
-    column-gap: 100px;
+    column-gap: 36px;
   }
 
   &__content {
@@ -77,6 +82,10 @@
       padding: 40px;
     }
 
+    &__titles {
+      margin-bottom: 32px;
+    }
+
     &__img {
       display: none;
     }
@@ -118,6 +127,10 @@
   .tarifs {
     &__card {
       padding: 20px;
+    }
+
+    &__titles {
+      margin-bottom: 24px;
     }
 
     &__names {

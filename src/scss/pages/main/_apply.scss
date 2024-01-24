@@ -2,6 +2,10 @@
   background-color: $grayBg;
   padding-top: 40px;
 
+  .h2 {
+    margin-bottom: 32px;
+  }
+
   &__container {
     @include flexStartBetween;
   }
@@ -9,6 +13,8 @@
   &__img {
     @include sizes(190px, 280px);
     flex-shrink: 0;
+    position: relative;
+    left: -12px;
   }
 
   &__form {
@@ -64,6 +70,7 @@
 
     &__btn {
       margin-top: 20px;
+      width: 260px;
     }
 
     &__policy {
@@ -72,6 +79,7 @@
 
     &__img {
       @include sizes(245px, 360px);
+      left: 0;
     }
   }
 }
@@ -80,6 +88,10 @@
   .apply {
     &__img {
       display: none;
+    }
+
+    .h2 {
+      margin-bottom: 24px;
     }
 
     &__content {

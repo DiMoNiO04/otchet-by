@@ -1,4 +1,8 @@
 .questions {
+  .h2 {
+    margin-bottom: 32px;
+  }
+
   &__block {
     @include mb(20px);
     border-radius: 8px;
@@ -15,11 +19,20 @@
       svg {
         stroke: $accent;
       }
+
+      .questions__block-question {
+        color: $accent;
+      }
     }
 
     &.active {
       svg {
         transform: rotate(180deg);
+        stroke: $accent;
+      }
+
+      .questions__block-question {
+        color: $accent;
       }
     }
   }
@@ -27,6 +40,7 @@
   &__block-question {
     @include bold16;
     max-width: 780px;
+    @include transition(color);
   }
 
   &__block-arrow {
@@ -69,8 +83,13 @@
       @include mb(16px);
     }
 
+    .h2 {
+      margin-bottom: 24px;
+    }
+
     &__block-inner {
       padding: 20px;
+      align-items: flex-start;
     }
 
     &__block-content {
@@ -80,7 +99,7 @@
 
     &__block-question {
       font-size: 14px;
-      max-width: 212px;
+      max-width: 90%;
     }
   }
 }

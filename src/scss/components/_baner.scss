@@ -83,6 +83,8 @@
     &__img {
       @include sizes(460px, 520px);
       flex-shrink: 0;
+      position: relative;
+      left: 24px;
     }
   }
 }
@@ -139,6 +141,7 @@
     .baner {
       &__img {
         @include sizes(306px, 347px);
+        left: 0;
       }
 
       &__container {
@@ -163,8 +166,9 @@
 
 @media screen and (max-width: $mob) {
   .baner--main {
+    padding: 40px 16px 0;
+
     .baner {
-      padding: 40px 16px 0;
       &__content {
         padding: 0;
         flex-direction: column-reverse;
@@ -184,6 +188,11 @@
   }
 
   .baner--service {
+    .h1 {
+      font-size: 32px;
+      line-height: 110%;
+    }
+
     .baner {
       &__img {
         display: none;
@@ -192,10 +201,6 @@
       &__content {
         padding-bottom: 60px;
         row-gap: 24px;
-      }
-
-      .h1 {
-        font-size: 32px;
       }
     }
 

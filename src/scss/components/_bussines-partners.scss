@@ -1,4 +1,8 @@
 .bussines-partners {
+  .h2 {
+    margin-bottom: 32px;
+  }
+
   &__items {
     @include grid(5);
     grid-gap: 20px;

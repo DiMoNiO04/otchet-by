@@ -1,4 +1,8 @@
 .beneficial {
+  .h2 {
+    margin-bottom: 32px;
+  }
+
   &__items {
     @include grid(4);
     grid-auto-rows: 1fr;
@@ -39,6 +43,10 @@
 
 @media screen and (max-width: $mob) {
   .beneficial {
+    .h2 {
+      margin-bottom: 24px;
+    }
+
     &__items {
       @include grid(1);
 
