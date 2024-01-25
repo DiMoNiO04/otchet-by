@@ -1,0 +1,48 @@
+.reviews-page {
+  .h1 {
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    width: 835px;
+    @include flexColumn;
+    row-gap: 20px;
+
+    li {
+      border-radius: 8px;
+      background-color: $grayBg;
+      padding: 32px;
+
+      b {
+        display: block;
+        color: $accent;
+        margin-top: 20px;
+        @include bold16;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .reviews-page {
+    .h1 {
+      margin-bottom: 32px;
+    }
+
+    &__items {
+      width: 100%;
+
+      li {
+        padding: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .reviews-page {
+    .h1 {
+      margin-bottom: 24px;
+    }
+  }
+}
