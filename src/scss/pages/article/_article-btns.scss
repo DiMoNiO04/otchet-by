@@ -1,0 +1,57 @@
+.article__btns {
+  @include grid(2);
+  column-gap: 40px;
+
+  &-btn {
+    @include flexColumn;
+    row-gap: 12px;
+
+    &:first-child {
+      align-items: flex-start;
+    }
+
+    &:last-child {
+      align-items: flex-end;
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+
+    svg {
+      @include sizes(16px, 16px);
+      @include transition(stroke);
+      fill: none;
+      stroke: $text;
+      stroke-width: 1.5;
+    }
+
+    span {
+      @include bold16;
+      @include transition(color);
+    }
+
+    @include hover {
+      svg {
+        stroke: $accent;
+      }
+
+      span {
+        color: $accent;
+      }
+    }
+  }
+
+  &-name {
+    @include regular14;
+    color: $greyTxt;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .article__btns {
+    display: none;
+  }
+}

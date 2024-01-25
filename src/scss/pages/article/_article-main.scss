@@ -1,0 +1,41 @@
+.article__main {
+  &-img {
+    @include sizes(100%, 250px);
+    margin-bottom: 24px;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  &-items {
+    @include flexCenterBetween;
+
+    li {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+
+      b {
+        @include regular14;
+        color: $text;
+        font-weight: 400;
+      }
+
+      span {
+        color: #6d6c6c;
+        @include regular14;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .article__main {
+    &-items {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 16px;
+    }
+  }
+}

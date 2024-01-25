@@ -1,0 +1,58 @@
+.article__author {
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid $greyDivider;
+  @include flexStart;
+  column-gap: 20px;
+
+  &-img {
+    @include sizes(146px, 100%);
+    flex-shrink: 0;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  &-content {
+    @include flexColumn;
+    row-gap: 20px;
+  }
+
+  &-tit {
+    @include regular14;
+    color: $greyTxt;
+  }
+
+  &-block {
+    @include flexColumn;
+    row-gap: 12px;
+  }
+
+  &-name {
+    @include bold16;
+  }
+
+  &-job {
+    @include regular14;
+    color: $greyTxt;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .article__author {
+    padding: 20px;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &-img {
+      @include sizes(100%, 240px);
+    }
+
+    &-name {
+      font-size: 14px;
+      line-height: 130%;
+      font-weight: 500;
+    }
+  }
+}

@@ -12,4 +12,9 @@
     position: sticky;
     top: 0;
   }
+
+  &__content {
+    @include flexColumn;
+    row-gap: 40px;
+  }
 }
