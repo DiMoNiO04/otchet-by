@@ -1,0 +1,109 @@
+.article {
+  &__aside {
+    border-radius: 8px;
+    background-color: $grayBg;
+    padding: 40px 24px;
+    @include flexColumn;
+    row-gap: 40px;
+    box-shadow: 0px 2px 10px -3px rgba(4, 4, 4, 0.2);
+  }
+
+  &__aside-title {
+    @include medium20;
+    margin-bottom: 24px;
+  }
+
+  .headings {
+    a {
+      span {
+        color: #6d6c6c;
+      }
+
+      @include hover {
+        border-color: $accent;
+
+        span {
+          color: $accent;
+        }
+      }
+
+      &.active {
+        border-color: $accent;
+
+        span {
+          color: $accent;
+        }
+      }
+
+      border-color: #d9d9d9;
+    }
+  }
+
+  &__aside-simis {
+    @include flexColumn;
+    row-gap: 20px;
+
+    li {
+      span {
+        display: block;
+        margin-bottom: 8px;
+        color: #6d6c6c;
+        @include regular14;
+      }
+
+      a {
+        @include regular14;
+        @include transition(color);
+
+        @include hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  &__aside-tit {
+    color: #16050b;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 125%;
+    margin-bottom: 16px;
+  }
+
+  &__aside-txt {
+    @include regular14;
+    color: $greyTxt;
+    margin-bottom: 24px;
+  }
+
+  &__aside-input {
+    @include mb(20px);
+  }
+
+  &__aside-btn {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__aside-policy {
+    @include secondary12;
+    color: $greyTxt;
+    margin-top: 16px;
+
+    a {
+      color: $accent;
+      border-bottom: 1px solid;
+      @include transition(border);
+
+      @include hover {
+        border-bottom: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .article__asides {
+    display: none;
+  }
+}

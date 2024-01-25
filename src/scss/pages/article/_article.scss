@@ -1,0 +1,15 @@
+.article {
+  &__container {
+    @include flexStartBetween;
+    column-gap: 40px;
+  }
+
+  &__asides {
+    width: 340px;
+    flex-shrink: 0;
+    @include flexColumn;
+    row-gap: 24px;
+    position: sticky;
+    top: 0;
+  }
+}
