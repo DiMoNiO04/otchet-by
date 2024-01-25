@@ -1,0 +1,140 @@
+.contacts-page {
+  .h1 {
+    margin-bottom: 32px;
+  }
+
+  &__container {
+    @include grid(2);
+    column-gap: 40px;
+  }
+
+  &__blocks {
+    @include flexColumn;
+    row-gap: 24px;
+
+    li {
+      span {
+        @include regular14;
+        color: $greyTxt;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      a,
+      p {
+        @include bold16;
+        @include transition(color);
+      }
+
+      a {
+        @include hover {
+          color: $greyTxt;
+        }
+      }
+
+      &:last-child {
+        border-radius: 8px;
+        background-color: $grayBg;
+        padding: 24px;
+
+        b {
+          @include bold16;
+          display: block;
+          margin-bottom: 12px;
+        }
+
+        p {
+          @include regular14;
+          color: $greyTxt;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  &__block {
+    display: none;
+  }
+
+  .socials a {
+    @include sizes(40px, 40px);
+    column-gap: 12px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .contacts-page {
+    &__container {
+      @include grid(1);
+      row-gap: 32px;
+    }
+
+    &__map {
+      order: 1;
+    }
+
+    &__blocks {
+      @include grid(2);
+      @include gapSize(20px, 24px);
+
+      li {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+
+    &__block {
+      display: block;
+      order: 1;
+    }
+
+    &__block-cont {
+      padding: 20px;
+      border-radius: 8px;
+      background-color: $grayBg;
+
+      b {
+        @include bold16;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      p {
+        @include regular14;
+        color: $greyTxt;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .contacts-page {
+    .h1 {
+      margin-bottom: 24px;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    &__container {
+      row-gap: 24px;
+    }
+
+    .h1,
+    &__blocks,
+    &__block {
+      padding: 0 16px;
+    }
+
+    &__blocks {
+      @include grid(1);
+      row-gap: 20px;
+    }
+
+    &__block-cont {
+      padding: 16px;
+    }
+  }
+}
