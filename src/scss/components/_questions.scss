@@ -3,6 +3,10 @@
     margin-bottom: 32px;
   }
 
+  .h1 {
+    margin-bottom: 40px;
+  }
+
   &__block {
     @include mb(20px);
     border-radius: 8px;
@@ -74,6 +78,10 @@
     &__block-content {
       max-width: 588px;
     }
+
+    &__block-inner {
+      align-items: flex-start;
+    }
   }
 }
 
@@ -89,12 +97,11 @@
 
     &__block-inner {
       padding: 20px;
-      align-items: flex-start;
     }
 
     &__block-content {
       max-width: 100%;
-      padding-bottom: 20px;
+      padding: 0 20px 20px;
     }
 
     &__block-question {
