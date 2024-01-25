@@ -5420,3 +5420,111 @@ main {
     height: 340px;
   }
 }
+.employee__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-column-gap: 32px;
+  -moz-column-gap: 32px;
+  column-gap: 32px;
+}
+.employee__img {
+  width: 443px;
+  height: 546px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.employee__img img {
+  border-radius: 8px;
+}
+.employee .h1 {
+  margin: 0;
+}
+.employee__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.employee__block b {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 125%;
+}
+.employee__block p {
+  color: #555152;
+  font-size: 14px;
+  line-height: 130%;
+}
+.employee__block--spec {
+  margin-top: 8px;
+}
+.employee__block--spec b {
+  margin-bottom: 20px;
+}
+.employee__block--spec ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.employee__block--spec ul li {
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #f7f7f7;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+  color: #241f20;
+}
+.employee__block--spec ul li:not(:last-child) {
+  margin-bottom: 0;
+}
+.employee__block--spec ul li::before {
+  display: none;
+}
+
+@media screen and (max-width: 1918px) {
+  .employee__block--spec {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 1198px) {
+  .employee__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .employee__img {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 766px) {
+  .employee .h1 {
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+  }
+  .employee__block--spec ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
