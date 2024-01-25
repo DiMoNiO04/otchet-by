@@ -1,0 +1,52 @@
+.teams {
+  &__cards {
+    @include grid(3);
+    grid-gap: 20px;
+  }
+
+  &__card-img {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    @include sizes(100%, 398px);
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  &__card-name {
+    letter-spacing: -0.2px;
+    @include h3;
+    @include transition(color);
+    @include hover {
+      color: $accent;
+    }
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__card-job {
+    @include regular14;
+    color: $greyTxt;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .teams {
+    &__cards {
+      @include grid(2);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .teams {
+    &__cards {
+      @include grid(1);
+    }
+
+    &__card-img {
+      height: 340px;
+    }
+  }
+}
