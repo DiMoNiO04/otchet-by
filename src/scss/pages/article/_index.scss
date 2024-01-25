@@ -1,0 +1,145 @@
+.articles {
+  .h1 {
+    margin: 0;
+  }
+
+  &__container {
+    @include flexColumn;
+    row-gap: 32px;
+  }
+
+  &__items {
+    @include flexStart;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    a {
+      @include flexCenter;
+      padding: 8px 12px 6px;
+      column-gap: 12px;
+      border-radius: 4px;
+      border: 1px solid $greyDivider;
+      width: fit-content;
+      @include transition(border);
+
+      span {
+        @include transition(color);
+        color: $greyTxt;
+        @include regular14;
+      }
+
+      @include hover {
+        border-color: $accent;
+
+        span {
+          color: $accent;
+        }
+      }
+
+      &.active {
+        border-color: $accent;
+
+        span {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    @include grid(3);
+    grid-gap: 20px;
+  }
+
+  &__card-img {
+    @include sizes(100%, 220px);
+    flex-shrink: 0;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &__card {
+    @include flexColumn;
+  }
+
+  &__img {
+    @include sizes(100%, 220px);
+
+    img {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  &__card-content {
+    border-radius: 0 0 8px 8px;
+    background-color: $grayBg;
+    padding: 24px;
+    height: 100%;
+    min-height: 130px;
+  }
+
+  &__card-top {
+    @include flexCenterBetween;
+    margin-bottom: 12px;
+
+    span {
+      @include regular14;
+
+      &:first-child {
+        color: $accent;
+      }
+
+      &:last-child {
+        color: $greyTxt;
+      }
+    }
+  }
+
+  &__card-tit {
+    @include bold16;
+  }
+
+  &__pagination {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .articles {
+    &__items {
+      grid-gap: 8px;
+    }
+
+    &__cards {
+      @include grid(2);
+    }
+
+    &__pagination {
+      grid-column-end: 3;
+    }
+
+    &__card-content {
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .articles {
+    &__cards {
+      @include grid(1);
+    }
+
+    &__container {
+      row-gap: 24px;
+    }
+
+    &__pagination {
+      grid-column-end: 2;
+    }
+  }
+}

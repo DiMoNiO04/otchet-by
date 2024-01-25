@@ -1,0 +1,61 @@
+.pagination {
+  @include flexCenter;
+  column-gap: 4px;
+  margin-top: 12px;
+
+  a,
+  span {
+    @include sizes(35px, 35px);
+    @include flexCenter;
+    padding: 6px 8px;
+    @include regular14;
+    border-radius: 4px;
+  }
+
+  a {
+    transition:
+      color 0.2s ease,
+      background 0.2s ease;
+    @include hover {
+      color: $accent;
+      background: $grayBg;
+    }
+  }
+
+  &__btn {
+    &:first-child {
+      margin-right: 12px;
+    }
+
+    &:last-child {
+      margin-left: 12px;
+    }
+
+    svg {
+      fill: none;
+      stroke: $text;
+      stroke-width: 1.5;
+      @include transition(stroke);
+    }
+
+    @include hover {
+      svg {
+        stroke: $accent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .pagination {
+    &__btn {
+      &:first-child {
+        margin-right: 8px;
+      }
+
+      &:last-child {
+        margin-left: 8px;
+      }
+    }
+  }
+}
