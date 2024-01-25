@@ -1,0 +1,31 @@
+.policy {
+  .h1 {
+    margin-bottom: 40px;
+  }
+
+  &__blocks {
+    @include flexColumn;
+    row-gap: 24px;
+    max-width: 740px;
+  }
+
+  .content p {
+    @include mb(12px);
+    color: #666;
+  }
+
+  a {
+    @include transition(color);
+    @include hover {
+      color: $accent;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .policy {
+    .h1 {
+      margin-bottom: 32px;
+    }
+  }
+}
