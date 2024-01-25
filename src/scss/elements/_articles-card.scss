@@ -1,0 +1,58 @@
+.articles__card {
+  @include flexColumn;
+  height: auto;
+
+  &-img {
+    @include sizes(100%, 220px);
+    flex-shrink: 0;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &-img {
+    @include sizes(100%, 220px);
+
+    img {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  &-content {
+    border-radius: 0 0 8px 8px;
+    background-color: $grayBg;
+    padding: 24px;
+    height: 100%;
+  }
+
+  &-top {
+    @include flexCenterBetween;
+    margin-bottom: 12px;
+
+    span {
+      @include regular14;
+
+      &:first-child {
+        color: $accent;
+      }
+
+      &:last-child {
+        color: $greyTxt;
+      }
+    }
+  }
+
+  &-tit {
+    @include bold16;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .articles__card {
+    &-content {
+      padding: 20px;
+    }
+  }
+}

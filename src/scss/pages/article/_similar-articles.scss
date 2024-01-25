@@ -1,0 +1,86 @@
+.similar-articles {
+  overflow: hidden;
+
+  &__titles {
+    @include flexCenterBetween;
+    margin-bottom: 40px;
+
+    .h2 {
+      margin: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__swiper {
+    margin-bottom: 20px;
+  }
+
+  .articles__card {
+    width: calc(100% / 3 - 40px / 3);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .similar-articles {
+    &__navigation {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .similar-articles {
+    &__titles {
+      margin-bottom: 32px;
+      padding: 0 40px;
+    }
+
+    &__swiper {
+      overflow: visible;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    &__slider {
+      padding: 0 40px;
+    }
+
+    .articles__card {
+      width: calc(100% / 2 - 20px / 2);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .similar-articles {
+    &__titles {
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      padding: 0 16px;
+    }
+
+    &__slider {
+      padding: 0 16px;
+    }
+
+    &__slide {
+      padding-bottom: 5px;
+    }
+
+    .articles__card-tit {
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    .articles__card {
+      width: 100%;
+    }
+  }
+}

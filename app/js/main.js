@@ -661,9 +661,44 @@ function initReviewsSlider() {
     });
   }
 }
+function initSimilarArticlesSlider() {
+  if (document.querySelector('.similar-articles__swiper')) {
+    const slider = document.querySelector('.similar-articles__swiper');
+    const btnPrev = slider.parentElement.querySelector('.slider-navigation__btns-prev');
+    const btnNext = slider.parentElement.querySelector('.slider-navigation__btns-next');
+    const bullets = slider.parentElement.querySelector('.similar-articles__bullets');
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
+      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
+      spaceBetween: 20,
+      observer: true,
+      navigation: {
+        nextEl: btnNext,
+        prevEl: btnPrev
+      },
+      pagination: {
+        el: bullets,
+        clickable: true
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: 1.1
+        },
+        768: {
+          slidesPerView: 2,
+          loop: false
+        },
+        1280: {
+          slidesPerView: 3,
+          loop: true
+        }
+      }
+    });
+  }
+}
 function initSliders() {
   initTeamSlider();
   initReviewsSlider();
+  initSimilarArticlesSlider();
 }
 window.addEventListener('DOMContentLoaded', initSliders);
 
