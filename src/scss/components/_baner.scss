@@ -9,6 +9,10 @@
   &__img {
     flex-shrink: 0;
   }
+
+  &__title {
+    margin: 0;
+  }
 }
 
 .baner--main {
@@ -128,7 +132,7 @@
   .baner--about {
     .baner {
       &__img {
-        right: 86px;
+        right: 66px;
       }
     }
   }
@@ -204,7 +208,7 @@
     .baner {
       &__img {
         @include sizes(354px, 349px);
-        right: -40px;
+        right: -80px;
       }
 
       &__content {

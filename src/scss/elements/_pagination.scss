@@ -19,6 +19,11 @@
       color: $accent;
       background: $grayBg;
     }
+
+    &.active {
+      color: $accent;
+      background: $grayBg;
+    }
   }
 
   &__btn {

@@ -1,6 +1,7 @@
 .h2 {
   @include h2;
   color: $text;
+  margin-bottom: 40px;
 }
 
 .h1 {
@@ -10,10 +11,6 @@
 
 @media screen and (max-width: $laptop) {
   .h2 {
-    margin-bottom: 32px;
-  }
-
-  .h1 {
     margin-bottom: 32px;
   }
 }

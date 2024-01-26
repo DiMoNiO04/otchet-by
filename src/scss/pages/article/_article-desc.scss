@@ -1,0 +1,110 @@
+.article__desc {
+  h1 {
+    @include h1;
+    margin-bottom: 32px;
+  }
+
+  h3 {
+    @include h3;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $greyTxt;
+    @include regular14;
+    @include mb(16px);
+  }
+
+  span {
+    @include regular14;
+    color: $accent;
+  }
+
+  ol {
+    @include flexColumn;
+    row-gap: 8px;
+    counter-reset: list;
+    padding: 0;
+    margin: 0 0 16px 0;
+
+    li {
+      @include regular14;
+      color: $greyTxt;
+      display: flex;
+
+      &:before {
+        content: counter(list) '.';
+        counter-increment: list;
+        font-family: 'Graphik LCG', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 125%;
+        color: $accent;
+        display: block;
+        @include sizes(20px, 20px);
+        margin-right: 4px;
+        flex-shrink: 0;
+      }
+
+      b {
+        display: contents;
+        @include regular14;
+        font-weight: 500;
+        color: $text;
+      }
+
+      span {
+        display: contents;
+        @include regular14;
+        color: $accent;
+      }
+    }
+  }
+
+  ul {
+    margin: 12px 0 16px;
+
+    li {
+      @include mb(8px);
+      @include regular14;
+      color: $greyTxt;
+      position: relative;
+      @include flexStart;
+      column-gap: 4px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url(../assets/img/bullet.svg);
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &-serv {
+    padding: 48px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    h2 {
+      @include h2;
+      margin-bottom: 20px;
+    }
+
+    p {
+      @include regular14;
+      color: $greyTxt;
+      margin-bottom: 32px;
+      max-width: 410px;
+    }
+
+    span {
+      color: $white;
+    }
+  }
+}

@@ -1,18 +1,18 @@
 .breadcrumbs {
   margin: 40px 0;
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  column-gap: 4px;
-  row-gap: 8px;
+  grid-gap: 4px;
   width: 100%;
 
   & > span {
     @include regular14;
     color: $text;
     cursor: default;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
   }
 
   a {

@@ -14,9 +14,15 @@
     }
   }
 
+  .h1 {
+    margin-bottom: 32px;
+  }
+
   &__card-name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 125%;
     letter-spacing: -0.2px;
-    @include h3;
     @include transition(color);
     @include hover {
       color: $accent;
@@ -45,8 +51,16 @@
       @include grid(1);
     }
 
+    .h1 {
+      margin-bottom: 24px;
+    }
+
     &__card-img {
       height: 340px;
+    }
+
+    &__card-name {
+      font-size: 16px;
     }
   }
 }
