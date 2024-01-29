@@ -1,0 +1,27 @@
+.article__top {
+  h3 {
+    @include h3;
+    margin-bottom: 20px;
+  }
+
+  a {
+    display: block;
+    color: $accent;
+    font-size: 16px;
+    line-height: 125%;
+    @include mb(16px);
+    @include transition(color);
+
+    @include hover {
+      color: $redHover;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .article__top {
+    h3 {
+      font-size: 20px;
+    }
+  }
+}

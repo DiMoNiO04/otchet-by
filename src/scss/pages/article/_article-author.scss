@@ -39,6 +39,14 @@
   }
 }
 
+@media screen and (max-width: $tablet) {
+  .article__author {
+    &-img {
+      @include sizes(133px, 154px);
+    }
+  }
+}
+
 @media screen and (max-width: $mob) {
   .article__author {
     padding: 20px;

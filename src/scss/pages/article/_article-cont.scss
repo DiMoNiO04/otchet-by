@@ -1,11 +1,9 @@
-.article__desc {
-  h1 {
-    @include h1;
-    margin-bottom: 32px;
-  }
+.article__cont {
+  margin-top: -8px;
 
   h3 {
     @include h3;
+    margin-top: 32px;
     margin-bottom: 20px;
   }
 
@@ -85,6 +83,10 @@
   }
 
   &-serv {
+    margin-top: 32px;
+  }
+
+  &-serv {
     padding: 48px;
     border-radius: 4px;
     background-size: cover;
@@ -103,8 +105,32 @@
       max-width: 410px;
     }
 
+    a {
+      margin-top: 32px;
+    }
+
     span {
       color: $white;
+    }
+
+    .btn-prim span {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .article__cont {
+    h3 {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .article__cont {
+    &-serv {
+      padding: 48px 20px;
     }
   }
 }

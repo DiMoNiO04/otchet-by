@@ -13,6 +13,16 @@
     &:last-child {
       align-items: flex-end;
     }
+
+    @include hover {
+      svg {
+        stroke: $accent;
+      }
+
+      span {
+        color: $accent;
+      }
+    }
   }
 
   &-link {
@@ -31,16 +41,6 @@
     span {
       @include bold16;
       @include transition(color);
-    }
-
-    @include hover {
-      svg {
-        stroke: $accent;
-      }
-
-      span {
-        color: $accent;
-      }
     }
   }
 

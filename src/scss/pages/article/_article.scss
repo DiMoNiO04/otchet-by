@@ -17,4 +17,9 @@
     @include flexColumn;
     row-gap: 40px;
   }
+
+  h1 {
+    @include h1;
+    margin-bottom: 32px;
+  }
 }

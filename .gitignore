@@ -12,3 +12,4 @@ anonymous-cli-metrics.json
 .prettierrc.json
 .stylelintrc.json
 gulpfile.js
+_update-notifier-last-checked
