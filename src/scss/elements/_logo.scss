@@ -4,16 +4,8 @@
   column-gap: 6.5px;
   padding: 7.5px 0;
 
-  svg {
-    @include sizes(25px, 25px);
+  img {
+    @include sizes(114px, 40px);
     flex-shrink: 0;
-  }
-
-  span {
-    font-family: Gilroy, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
   }
 }

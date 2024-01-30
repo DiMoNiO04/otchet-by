@@ -44,7 +44,8 @@
         flex-shrink: 0;
       }
 
-      b {
+      b,
+      strong {
         display: contents;
         @include regular14;
         font-weight: 500;

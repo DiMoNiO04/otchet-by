@@ -47,10 +47,10 @@ function toggleBurgerMenu() {
 }
 
 function hoverLink() {
-  const links = document.querySelectorAll('.js-header-link');
+  const links = document.querySelectorAll('.header__bottom-list > .menu-item-has-children');
 
   links.forEach((link) => {
-    const linkMenu = link.querySelector('.js-header-links');
+    const linkMenu = link.querySelector('.sub-menu');
 
     link.addEventListener('mouseover', function () {
       linkMenu.classList.add('active');
@@ -66,11 +66,11 @@ function hoverLink() {
 }
 
 function hoverSubLinks() {
-  const links = document.querySelectorAll('.js-header-sublink');
-  const mainLinks = document.querySelector('.js-header-links');
+  const links = document.querySelectorAll('.header__bottom-list > li > ul > .menu-item-has-children');
+  const mainLinks = document.querySelector('.header__bottom-list > li > ul');
 
   links.forEach((link) => {
-    const linkMenu = link.querySelector('.js-header-sublinks');
+    const linkMenu = link.querySelector('.header__bottom-list > li > ul > li > ul');
 
     link.addEventListener('mouseover', function () {
       this.classList.add('active');
@@ -85,10 +85,31 @@ function hoverSubLinks() {
     });
   });
 }
+function addBirdIcon() {
+  const links = document.querySelectorAll('.menu-item-has-children');
+
+  links.forEach((link) => {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    svg.setAttribute('width', '20');
+    svg.setAttribute('height', '20');
+    svg.setAttribute('viewBox', '0 0 20 20');
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M5 7.5L10 12.5L15 7.5');
+    path.setAttribute('stroke-width', '1.5');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+
+    svg.appendChild(path);
+    link.appendChild(svg);
+  });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   toggleSearch();
   toggleBurgerMenu();
   hoverLink();
   hoverSubLinks();
+  addBirdIcon();
 });

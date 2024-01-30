@@ -168,159 +168,159 @@
     display: flex;
     align-items: center;
     column-gap: 28px;
-  }
 
-  &__bottom-item {
-    display: flex;
-    align-items: center;
-    column-gap: 4px;
-    position: relative;
-    cursor: pointer;
-
-    & > a,
-    & > p {
-      @include regular16;
-      color: $greyTxt;
-      @include transition(color);
-    }
-
-    & > svg {
-      @include sizes(16px, 16px);
-      fill: none;
-      stroke-width: 1.5;
-      stroke: $greyTxt;
-      transition:
-        transform 0.2s ease,
-        stroke 0.2s ease;
-    }
-
-    &.active {
-      & > a,
-      & > p {
-        color: $accent;
-      }
-
-      & > svg {
-        stroke: $accent;
-        transform: rotate(180deg);
-      }
-    }
-
-    @include hover {
-      & > a,
-      & > p {
-        color: $accent;
-      }
-
-      & > svg {
-        transform: rotate(180deg);
-        stroke: $accent;
-      }
-    }
-  }
-
-  &__bottom-links {
-    padding: 32px;
-    border-radius: 8px;
-    background: $white;
-    box-shadow: 0px 7px 14px 0px rgba(11, 31, 53, 0.1);
-    position: absolute;
-    top: 22px;
-    left: -32px;
-    height: fit-content;
-    width: 320px;
-    @include hidden;
-    z-index: -2;
-
-    &.active {
-      @include visible;
-      z-index: 2;
-    }
-
-    &.hover {
-      width: 870px;
-      .header__bottom-link {
-        padding-right: 40px;
-      }
-    }
-  }
-
-  &__bottom-link {
-    @include mb(16px);
-    width: 242px;
-    box-sizing: content-box;
-
-    & > a,
-    p {
-      @include regular14;
-      color: $greyTxt;
-      @include transition(color);
-    }
-
-    svg {
-      @include transition(stroke);
-      flex-shrink: 0;
-      @include sizes(16px, 16px);
-      fill: none;
-      stroke: $text;
-    }
-
-    @include hover {
-      & > a,
-      p {
-        color: $accent;
-      }
-
-      svg {
-        stroke: $accent;
-      }
-    }
-
-    &.active {
-      & > a,
-      p {
-        color: $accent;
-      }
-
-      svg {
-        stroke: $accent;
-      }
-    }
-  }
-
-  &__bottom-sublink {
-    @include flexStart;
-    column-gap: 4px;
-  }
-
-  &__bottom-submenu {
-    position: absolute;
-    box-sizing: border-box;
-    width: 550px;
-    height: 100%;
-    left: 316px;
-    top: 0;
-    padding: 32px;
-    border-radius: 0 4px 4px 0;
-    @include flexColumn;
-    row-gap: 16px;
-    display: none;
-    border-left: 1px solid $greyDivider;
-
-    &.active {
+    & > li {
       display: flex;
-    }
+      align-items: center;
+      column-gap: 4px;
+      position: relative;
+      cursor: pointer;
 
-    a {
-      @include transition(color);
-      @include regular14;
-      color: $greyTxt;
-    }
+      & > a,
+      & > p {
+        @include regular16;
+        color: $greyTxt;
+        @include transition(color);
+      }
 
-    li {
-      @include hover {
-        a {
+      & > svg {
+        @include sizes(16px, 16px);
+        fill: none;
+        stroke-width: 1.5;
+        stroke: $greyTxt;
+        transition:
+          transform 0.2s ease,
+          stroke 0.2s ease;
+      }
+
+      &.active {
+        & > a,
+        & > p {
           color: $accent;
+        }
+
+        & > svg {
+          stroke: $accent;
+          transform: rotate(180deg);
+        }
+      }
+
+      @include hover {
+        & > a,
+        & > p {
+          color: $accent;
+        }
+
+        & > svg {
+          transform: rotate(180deg);
+          stroke: $accent;
+        }
+      }
+
+      & > ul {
+        padding: 32px 0 32px 32px;
+        border-radius: 8px;
+        background: $white;
+        box-shadow: 0px 7px 14px 0px rgba(11, 31, 53, 0.1);
+        position: absolute;
+        top: 22px;
+        left: -32px;
+        height: fit-content;
+        width: 320px;
+        @include hidden;
+        z-index: -2;
+        background: $white;
+
+        &.active {
+          @include visible;
+          z-index: 2;
+        }
+
+        &.hover {
+          width: 870px;
+        }
+
+        & > li {
+          @include mb(16px);
+          width: 242px;
+          box-sizing: content-box;
+          padding-right: 32px;
+          display: flex;
+          align-items: flex-start;
+          column-gap: 4px;
+
+          & > a,
+          p {
+            @include regular14;
+            color: $greyTxt;
+            @include transition(color);
+          }
+
+          svg {
+            @include transition(stroke);
+            flex-shrink: 0;
+            @include sizes(16px, 16px);
+            fill: none;
+            stroke: $text;
+            transform: rotate(-90deg);
+            position: relative;
+            top: 1.4px;
+          }
+
+          @include hover {
+            & > a,
+            p {
+              color: $accent;
+            }
+
+            svg {
+              stroke: $accent;
+            }
+          }
+
+          &.active {
+            & > a,
+            p {
+              color: $accent;
+            }
+
+            svg {
+              stroke: $accent;
+            }
+          }
+
+          & > ul {
+            position: absolute;
+            box-sizing: border-box;
+            width: 550px;
+            height: 100%;
+            left: 306px;
+            top: 0;
+            padding: 32px;
+            border-radius: 0 4px 4px 0;
+            @include flexColumn;
+            row-gap: 16px;
+            display: none;
+            border-left: 1px solid $greyDivider;
+
+            &.active {
+              display: flex;
+            }
+
+            a {
+              @include transition(color);
+              @include regular14;
+              color: $greyTxt;
+            }
+
+            li {
+              @include hover {
+                a {
+                  color: $accent;
+                }
+              }
+            }
+          }
         }
       }
     }

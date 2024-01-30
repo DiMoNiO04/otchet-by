@@ -16,7 +16,8 @@
       align-items: center;
       column-gap: 4px;
 
-      b {
+      b,
+      strong {
         @include regular14;
         color: $text;
         font-weight: 400;

@@ -9,10 +9,10 @@
           <p>Минск, ул. Янки Купалы, д. 11, пом. 1Н</p>
         </div>
         <a href="#" class="header__logo logo">
-          <svg>
-            <use xlink:href="assets/img/sprite.svg#logo"></use>
-          </svg>
-          <span>otchet.by</span>
+          <picture>
+            <source media="(max-width: 767px)" srcset="assets/img/logos/header-logo-mob.svg" />
+            <img src="assets/img/logos/header-logo-desc.svg" alt="" />
+          </picture>
         </a>
         <div class="header__top-panel">
           <div class="header__top-time">Пн-Пт: 8:30-20:00</div>
@@ -75,243 +75,301 @@
     <div class="container">
       <div class="header__bottom-container">
         <a href="#" class="header__logo logo">
-          <svg>
-            <use xlink:href="assets/img/sprite.svg#logo"></use>
-          </svg>
-          <span>otchet.by</span>
+          <img src="assets/img/logos/header-logo-desc.svg" alt="" />
         </a>
         <nav class="header__bottom-menu">
-          <ul class="header__bottom-list hover">
-            <li class="header__bottom-item js-header-link">
-              <a href="#">Бухгалтерские услуги</a>
-              <svg>
-                <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
-              </svg>
-              <ul class="header__bottom-links js-header-links">
-                <li class="header__bottom-link js-header-sublink">
-                  <div class="header__bottom-sublink">
-                    <p>Аутсорсинг бухгалтерских услуг</p>
-                    <svg>
-                      <use xlink:href="assets/img/sprite.svg#arrow-header"></use>
-                    </svg>
-                    <ul class="header__bottom-submenu js-header-sublinks">
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского учета для ООО </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для ИП </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для IT-компаний </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Витебске и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Гомеле и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Витебске и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Гомеле и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Могилеве и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Бресте и области </a>
-                      </li>
-                    </ul>
-                  </div>
+          <ul id="menu-glavnoe-menyu" class="header__bottom-list hover">
+            <li
+              id="menu-item-245"
+              class="js-header-link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-245"
+            >
+              <a>Бухгалтерские услуги</a>
+
+              <ul class="sub-menu">
+                <li
+                  id="menu-item-251"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-251"
+                >
+                  <a href="#">Аутсорсинг бухгалтерских услуг</a>
+                  <ul class="sub-menu">
+                    <li
+                      id="menu-item-252"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-252"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского учета для ООО</a>
+                    </li>
+                    <li
+                      id="menu-item-253"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-253"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для ИП</a>
+                    </li>
+                    <li
+                      id="menu-item-254"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-254"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для IT-компаний</a>
+                    </li>
+                    <li
+                      id="menu-item-255"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Витебске и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-256"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-256"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Гомеле и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-258"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-258"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Могилеве и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-259"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Бресте и&nbsp;области</a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Абонентское бухгалтерское и налоговое обслуживание </a>
+                <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-260">
+                  <a href="#">Абонентское бухгалтерское и&nbsp;налоговое обслуживание</a>
                 </li>
-                <li class="header__bottom-link js-header-sublink">
-                  <div class="header__bottom-sublink">
-                    <p>Налоговое консультирование</p>
-                    <svg>
-                      <use xlink:href="assets/img/sprite.svg#arrow-header"></use>
-                    </svg>
-                    <ul class="header__bottom-submenu js-header-sublinks">
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского учета для ООО </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для ИП </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для IT-компаний </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Витебске и области </a>
-                      </li>
-                    </ul>
-                  </div>
+                <li
+                  id="menu-item-261"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-261"
+                >
+                  <a href="#">Налоговое консультирование</a>
+                  <ul class="sub-menu">
+                    <li
+                      id="menu-item-262"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-262"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского учета для ООО</a>
+                    </li>
+                    <li
+                      id="menu-item-263"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-263"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для ИП</a>
+                    </li>
+                    <li
+                      id="menu-item-264"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-264"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для IT-компаний</a>
+                    </li>
+                    <li
+                      id="menu-item-265"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-265"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Витебске и&nbsp;области</a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Ведение бухгалтерского и налогового учета </a>
+                <li id="menu-item-266" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-266">
+                  <a href="#">Ведение бухгалтерского и&nbsp;налогового учета</a>
                 </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Бухгалтерские консультации </a>
+                <li id="menu-item-267" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-267">
+                  <a href="#">Бухгалтерские консультации</a>
                 </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Бухгалтерские услуги при УСН </a>
+                <li id="menu-item-268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-268">
+                  <a href="#">Бухгалтерские услуги при&nbsp;УСН</a>
                 </li>
-                <li class="header__bottom-link js-header-sublink">
-                  <div class="header__bottom-sublink">
-                    <p>Бухгалтерские услуги для ООО</p>
-                    <svg>
-                      <use xlink:href="assets/img/sprite.svg#arrow-header"></use>
-                    </svg>
-                    <ul class="header__bottom-submenu js-header-sublinks">
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского учета для ООО </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для ИП </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для IT-компаний </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Витебске и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Гомеле и области </a>
-                      </li>
-                    </ul>
-                  </div>
+                <li
+                  id="menu-item-269"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-269"
+                >
+                  <a href="#">Бухгалтерские услуги для&nbsp;ООО</a>
+                  <ul class="sub-menu">
+                    <li
+                      id="menu-item-270"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-270"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского учета для ООО</a>
+                    </li>
+                    <li
+                      id="menu-item-271"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-271"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для ИП</a>
+                    </li>
+                    <li
+                      id="menu-item-272"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-272"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для IT-компаний</a>
+                    </li>
+                    <li
+                      id="menu-item-273"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-273"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Витебске и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-274"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-274"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Гомеле и&nbsp;области</a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Бухгалтерские услуги для ИП </a>
+                <li id="menu-item-275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-275">
+                  <a href="#">Бухгалтерские услуги для&nbsp;ИП</a>
                 </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Ревизия бухгалтерского и налогового учета </a>
+                <li id="menu-item-276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-276">
+                  <a href="#">Ревизия бухгалтерского и&nbsp;налогового учета</a>
                 </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Восстановление бухгалтерского учёта </a>
+                <li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-277">
+                  <a href="#">Восстановление бухгалтерского учёта</a>
                 </li>
-                <li class="header__bottom-link js-header-sublink">
-                  <div class="header__bottom-sublink">
-                    <p>Постановка бухгалтерского и налогового учёта</p>
-                    <svg>
-                      <use xlink:href="assets/img/sprite.svg#arrow-header"></use>
-                    </svg>
-                    <ul class="header__bottom-submenu js-header-sublinks">
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского учета для ООО </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для ИП </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для IT-компаний </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Витебске и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Гомеле и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Витебске и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Гомеле и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Могилеве и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Бресте и области </a>
-                      </li>
-                    </ul>
-                  </div>
+                <li
+                  id="menu-item-278"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-278"
+                >
+                  <a href="#">Постановка бухгалтерского и&nbsp;налогового учёта</a>
+                  <ul class="sub-menu">
+                    <li
+                      id="menu-item-279"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-279"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского учета для ООО</a>
+                    </li>
+                    <li
+                      id="menu-item-280"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-280"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для ИП</a>
+                    </li>
+                    <li
+                      id="menu-item-281"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-281"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для IT-компаний</a>
+                    </li>
+                    <li
+                      id="menu-item-282"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-282"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Витебске и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-283"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-283"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Гомеле и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-284"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Витебске и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-285"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Гомеле и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-286"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Могилеве и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-287"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Бресте и&nbsp;области</a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="header__bottom-link js-header-sublink">
-                  <div class="header__bottom-sublink">
-                    <p>Разовые бухгалтерские услуги</p>
-                    <svg>
-                      <use xlink:href="assets/img/sprite.svg#arrow-header"></use>
-                    </svg>
-                    <ul class="header__bottom-submenu js-header-sublinks">
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского учета для ООО </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для ИП </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета для IT-компаний </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Витебске и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Гомеле и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Витебске и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Гомеле и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Могилеве и области </a>
-                      </li>
-                      <li>
-                        <a href="#"> Аутсорсинг бухгалтерского и налогового учета в Бресте и области </a>
-                      </li>
-                    </ul>
-                  </div>
+                <li
+                  id="menu-item-288"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-288"
+                >
+                  <a href="#">Разовые бухгалтерские услуги</a>
+                  <ul class="sub-menu">
+                    <li
+                      id="menu-item-289"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-289"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского учета для ООО</a>
+                    </li>
+                    <li
+                      id="menu-item-290"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для ИП</a>
+                    </li>
+                    <li
+                      id="menu-item-291"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета для IT-компаний</a>
+                    </li>
+                    <li
+                      id="menu-item-292"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-292"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Витебске и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-293"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-293"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Гомеле и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-294"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-294"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Витебске и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-295"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-295"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Гомеле и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-296"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-296"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Могилеве и&nbsp;области</a>
+                    </li>
+                    <li
+                      id="menu-item-297"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-297"
+                    >
+                      <a href="#">Аутсорсинг бухгалтерского и&nbsp;налогового учета в&nbsp;Бресте и&nbsp;области</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
-            <li class="header__bottom-item">
-              <a href="#">Акции</a>
+            <li id="menu-item-250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250">
+              <a href="https://otchet.by/price/">Цены</a>
             </li>
-            <li class="header__bottom-item">
-              <a href="#">Цены</a>
+            <li id="menu-item-246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246">
+              <a>Акции</a>
             </li>
-            <li class="header__bottom-item js-header-link">
-              <p>О компании</p>
-              <svg>
-                <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
-              </svg>
-              <ul class="header__bottom-links js-header-links">
-                <li class="header__bottom-link">
-                  <a href="#"> Наши цены </a>
-                </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Контакты </a>
-                </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Акции </a>
-                </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Отзывы </a>
-                </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Наши сотрудники </a>
-                </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Вопрос/ответ </a>
-                </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Статьи </a>
-                </li>
-                <li class="header__bottom-link">
-                  <a href="#"> Политика конфиденциальности </a>
-                </li>
-              </ul>
+            <li
+              id="menu-item-248"
+              class="js-header-link menu-item menu-item-type-post_type menu-item-object-page menu-item-248"
+            >
+              <a href="https://otchet.by/company/">О компании</a>
             </li>
-            <li class="header__bottom-item">
-              <a href="#">Статьи</a>
+            <li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249">
+              <a href="https://otchet.by/stati/">Статьи</a>
             </li>
-            <li class="header__bottom-item">
-              <a href="#">Контакты</a>
+            <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247">
+              <a href="https://otchet.by/contacts/">Контакты</a>
             </li>
           </ul>
         </nav>
